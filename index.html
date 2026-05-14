@@ -4,1146 +4,510 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sumegha × Hyrox Delhi 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<title>Sumegha x Hyrox Delhi 2026</title>
 <style>
 :root {
 --ink: #0d0d0d;
 --paper: #f5f2ec;
---warm: #ede9e0;
---accent: #d4390a;
---accent2: #1a472a;
---gold: #c8993a;
---muted: #8a8478;
---border: #d8d3c8;
+--warm: #edeae1;
+--red: #c93208;
+--green: #1a4f2a;
+--gold: #b8892a;
+--muted: #888078;
+--border: #d4cfc4;
 --text: #1a1916;
 }
-
-- { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
 
 body {
-background: var(–paper);
-color: var(–text);
-font-family: ‘Archivo’, sans-serif;
+background: #dedad2;
+font-family: -apple-system, BlinkMacSystemFont, ‘Helvetica Neue’, Arial, sans-serif;
 font-size: 15px;
 line-height: 1.5;
-max-width: 480px;
+color: var(–text);
+min-height: 100vh;
+}
+.wrap {
+background: var(–paper);
+max-width: 460px;
 margin: 0 auto;
 min-height: 100vh;
 }
+@media (min-width: 520px) {
+body { padding: 32px 0 48px; }
+.wrap { border-radius: 6px; min-height: auto; box-shadow: 0 4px 48px rgba(0,0,0,0.2); }
+}
 
-/* ─── HEADER ─── */
-.masthead {
+/* MASTHEAD */
+.mast {
 background: var(–ink);
 color: var(–paper);
-padding: 36px 24px 28px;
+padding: 32px 22px 48px;
 position: relative;
 overflow: hidden;
 }
-.masthead::after {
+.mast::after {
 content: ‘’;
 position: absolute;
 bottom: -1px; left: 0; right: 0;
-height: 32px;
+height: 26px;
 background: var(–paper);
-clip-path: ellipse(55% 100% at 50% 100%);
+clip-path: ellipse(52% 100% at 50% 100%);
 }
-.masthead-label {
-font-family: ‘DM Mono’, monospace;
+.mast-eye {
 font-size: 10px;
-letter-spacing: 0.22em;
+letter-spacing: 0.2em;
 text-transform: uppercase;
-color: var(–muted);
+color: #666;
 margin-bottom: 10px;
+font-weight: 400;
 }
-.masthead-name {
-font-family: ‘Archivo Black’, sans-serif;
-font-size: 42px;
-line-height: 0.95;
-letter-spacing: -0.01em;
-margin-bottom: 6px;
+.mast-name {
+font-size: 52px;
+font-weight: 900;
+line-height: 0.92;
+letter-spacing: -0.02em;
+color: #fff;
+margin-bottom: 4px;
 }
-.masthead-name em {
-display: block;
-font-style: normal;
-color: var(–accent);
-}
-.masthead-race {
-font-family: ‘DM Mono’, monospace;
+.mast-name span { color: var(–red); }
+.mast-sub {
 font-size: 11px;
 letter-spacing: 0.12em;
-color: #888;
-margin-top: 14px;
+color: #555;
+margin-top: 16px;
+font-weight: 400;
 }
 
-/* ─── COUNTDOWN ─── */
-.countdown {
+/* COUNTDOWN */
+.cd {
 display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 0;
+grid-template-columns: repeat(3,1fr);
 border-bottom: 1px solid var(–border);
-margin: 0 24px;
+margin: 0 20px;
 }
-.cd-unit {
-padding: 18px 0 14px;
+.cd-u {
+padding: 18px 0 13px;
 text-align: center;
 border-right: 1px solid var(–border);
 }
-.cd-unit:last-child { border-right: none; }
-.cd-num {
-font-family: ‘Archivo Black’, sans-serif;
-font-size: 38px;
+.cd-u:last-child { border-right: none; }
+.cd-n {
+display: block;
+font-size: 44px;
+font-weight: 900;
 line-height: 1;
 color: var(–ink);
-display: block;
+letter-spacing: -0.01em;
 }
-.cd-label {
-font-family: ‘DM Mono’, monospace;
+.cd-l {
+display: block;
 font-size: 9px;
 letter-spacing: 0.18em;
 text-transform: uppercase;
 color: var(–muted);
 margin-top: 3px;
-display: block;
 }
 
-/* ─── GOAL STRIP ─── */
-.goal-strip {
-margin: 0 24px;
-padding: 14px 0;
+/* CHIPS */
+.chips {
 display: flex;
-gap: 8px;
+gap: 7px;
+padding: 13px 20px;
 border-bottom: 1px solid var(–border);
+flex-wrap: wrap;
 }
-.goal-chip {
-font-family: ‘DM Mono’, monospace;
+.chip {
 font-size: 10px;
-letter-spacing: 0.1em;
+letter-spacing: 0.08em;
 text-transform: uppercase;
 padding: 5px 12px;
 border-radius: 100px;
-border: 1px solid;
+border: 1.5px solid;
+font-weight: 500;
+white-space: nowrap;
 }
-.chip-pb { border-color: var(–border); color: var(–muted); background: var(–warm); }
-.chip-goal { border-color: var(–accent); color: var(–accent); background: rgba(212,57,10,0.06); }
-.chip-stretch { border-color: var(–gold); color: var(–gold); background: rgba(200,153,58,0.06); }
+.c-pb { border-color: var(–border); color: var(–muted); }
+.c-goal { border-color: var(–red); color: var(–red); background: rgba(201,50,8,.05); }
+.c-str { border-color: var(–gold); color: var(–gold); background: rgba(184,137,42,.05); }
 
-/* ─── SECTION ─── */
-.section { padding: 28px 24px 0; }
-.section-head {
+/* SECTION */
+.sec { padding: 26px 20px 0; }
+.sec-hd {
 display: flex;
 align-items: baseline;
 justify-content: space-between;
 margin-bottom: 14px;
 }
-.section-title {
-font-family: ‘Archivo Black’, sans-serif;
-font-size: 13px;
-letter-spacing: 0.06em;
-text-transform: uppercase;
-color: var(–ink);
-}
-.section-sub {
-font-family: ‘DM Mono’, monospace;
-font-size: 9px;
-letter-spacing: 0.12em;
-text-transform: uppercase;
-color: var(–muted);
+.sec-t { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(–ink); }
+.sec-s { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(–muted); }
+
+/* PROGRESS */
+.prog-bar { height: 3px; background: var(–border); margin-bottom: 7px; }
+.prog-fill { height: 100%; width: 28%; background: var(–ink); }
+.prog-meta {
+display: flex; justify-content: space-between;
+font-size: 10px; color: var(–muted); letter-spacing: 0.07em;
+margin-bottom: 14px;
 }
 
-/* ─── WEEK GRID ─── */
-.week-grid {
-display: grid;
-grid-template-columns: repeat(7, 1fr);
-gap: 4px;
-margin-bottom: 8px;
-}
+/* WEEK GRID */
+.wk-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: 4px; }
 .wk {
 aspect-ratio: 1;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-border: 1px solid var(–border);
+display: flex; flex-direction: column;
+align-items: center; justify-content: center;
+border: 1.5px solid var(–border);
 background: var(–warm);
 position: relative;
 }
-.wk-num {
-font-family: ‘Archivo Black’, sans-serif;
-font-size: 14px;
-line-height: 1;
-color: var(–muted);
-}
-.wk-tag {
-font-family: ‘DM Mono’, monospace;
-font-size: 6px;
-letter-spacing: 0.04em;
-color: var(–muted);
-text-align: center;
-margin-top: 2px;
-line-height: 1.2;
-}
-.wk.done { background: rgba(26,71,42,0.08); border-color: rgba(26,71,42,0.25); }
-.wk.done .wk-num { color: var(–accent2); }
+.wk-n { font-size: 15px; font-weight: 900; line-height: 1; color: var(–muted); }
+.wk-t { font-size: 6px; color: var(–muted); margin-top: 2px; letter-spacing: 0.03em; text-align: center; }
+.wk.done { background: rgba(26,79,42,.07); border-color: rgba(26,79,42,.3); }
+.wk.done .wk-n { color: var(–green); }
+.wk.done::after { content:‘v’; position:absolute; top:1px; right:3px; font-size:6px; color:var(–green); font-weight:700; }
 .wk.now { background: var(–ink); border-color: var(–ink); }
-.wk.now .wk-num, .wk.now .wk-tag { color: var(–paper); }
-.wk.deload { background: rgba(200,153,58,0.08); border-color: rgba(200,153,58,0.3); }
-.wk.deload .wk-num { color: var(–gold); }
-.wk.done::after {
-content: ‘✓’;
-position: absolute;
-top: 2px; right: 3px;
-font-size: 6px;
-color: var(–accent2);
-}
+.wk.now .wk-n, .wk.now .wk-t { color: #fff; }
+.wk.deload { background: rgba(184,137,42,.07); border-color: rgba(184,137,42,.32); }
+.wk.deload .wk-n { color: var(–gold); }
 
-/* Progress bar */
-.prog-bar {
-height: 3px;
-background: var(–border);
-margin-bottom: 6px;
-position: relative;
-}
-.prog-fill {
-height: 100%;
-background: var(–ink);
-width: 21%;
-}
-.prog-label {
-font-family: ‘DM Mono’, monospace;
-font-size: 10px;
-color: var(–muted);
-letter-spacing: 0.08em;
-display: flex;
-justify-content: space-between;
-margin-bottom: 12px;
-}
-
-/* ─── ALERT CARD ─── */
+/* CARDS */
 .alert-card {
-background: var(–warm);
 border: 1px solid var(–border);
-border-left: 3px solid var(–accent);
-padding: 14px 16px;
-margin-bottom: 10px;
-}
-.alert-title {
-font-family: ‘Archivo Black’, sans-serif;
-font-size: 11px;
-letter-spacing: 0.06em;
-text-transform: uppercase;
-color: var(–accent);
-margin-bottom: 5px;
-}
-.alert-body {
-font-family: ‘Archivo’, sans-serif;
-font-size: 12px;
-color: var(–muted);
-line-height: 1.6;
-font-weight: 300;
-}
-.note-card {
+border-left: 3px solid var(–red);
 background: var(–warm);
+padding: 13px 15px;
+margin-bottom: 9px;
+}
+.alert-t { font-size: 11px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(–red); margin-bottom: 5px; }
+.alert-b { font-size: 12px; color: var(–muted); line-height: 1.65; font-weight: 400; }
+.note-card {
 border: 1px solid var(–border);
 border-left: 3px solid var(–gold);
-padding: 12px 16px;
-}
-.note-body {
-font-family: ‘Archivo’, sans-serif;
-font-size: 12px;
-color: var(–muted);
-line-height: 1.6;
-font-weight: 300;
-}
-
-/* ─── SAVINGS STRIP ─── */
-.savings-row {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 8px;
-margin-bottom: 8px;
-}
-.saving-card {
 background: var(–warm);
-border: 1px solid var(–border);
-padding: 14px;
+padding: 12px 15px;
 }
-.saving-num {
-font-family: ‘Archivo Black’, sans-serif;
-font-size: 26px;
-line-height: 1;
-margin-bottom: 3px;
-}
-.saving-label {
-font-family: ‘DM Mono’, monospace;
-font-size: 9px;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-color: var(–muted);
-line-height: 1.4;
-}
+.note-b { font-size: 12px; color: var(–muted); line-height: 1.65; font-weight: 400; }
 
-/* ─── BBJ BLOCK ─── */
-.bbj-card {
-background: var(–ink);
-color: var(–paper);
-padding: 20px;
-position: relative;
-overflow: hidden;
-margin-bottom: 10px;
+/* SAVINGS */
+.savings { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.sav { background: var(–warm); border: 1px solid var(–border); padding: 14px; }
+.sav-n { font-size: 30px; font-weight: 900; line-height: 1; letter-spacing: -0.02em; margin-bottom: 5px; }
+.sav-l { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(–muted); line-height: 1.5; }
+
+/* BBJ */
+.bbj {
+background: var(–ink); color: var(–paper);
+padding: 20px; position: relative; overflow: hidden;
 }
-.bbj-card::before {
+.bbj::before {
 content: ‘BBJ’;
-position: absolute;
-right: -10px; top: -10px;
-font-family: ‘Archivo Black’, sans-serif;
-font-size: 80px;
-color: rgba(255,255,255,0.04);
-line-height: 1;
-letter-spacing: -0.02em;
-pointer-events: none;
+position: absolute; right: -8px; top: -6px;
+font-size: 96px; font-weight: 900;
+color: rgba(255,255,255,.04); line-height: 1;
+pointer-events: none; letter-spacing: -0.02em;
 }
-.bbj-top {
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-margin-bottom: 16px;
-}
-.bbj-time {
-font-family: ‘Archivo Black’, sans-serif;
-font-size: 44px;
-line-height: 1;
-color: var(–accent);
-}
-.bbj-sublabel {
-font-family: ‘DM Mono’, monospace;
-font-size: 9px;
-letter-spacing: 0.12em;
-color: #666;
-margin-top: 4px;
-text-transform: uppercase;
-}
-.bbj-right { text-align: right; }
-.bbj-target-num {
-font-family: ‘Archivo Black’, sans-serif;
-font-size: 20px;
-color: #aaa;
-}
-.bbj-target-label {
-font-family: ‘DM Mono’, monospace;
-font-size: 9px;
-color: #555;
-text-transform: uppercase;
-letter-spacing: 0.1em;
-}
-.bbj-under {
-font-family: ‘DM Mono’, monospace;
-font-size: 10px;
-color: #4caf50;
-margin-top: 3px;
-letter-spacing: 0.06em;
-}
-.bbj-bar-row {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-bottom: 6px;
-}
-.bbj-bar-label {
-font-family: ‘DM Mono’, monospace;
-font-size: 9px;
-color: #555;
-width: 70px;
-flex-shrink: 0;
-text-transform: uppercase;
-letter-spacing: 0.06em;
-}
-.bbj-bar-track {
-flex: 1;
-height: 5px;
-background: rgba(255,255,255,0.08);
-}
-.bbj-bar-fill { height: 100%; }
-.bbj-bar-val {
-font-family: ‘DM Mono’, monospace;
-font-size: 10px;
-color: #888;
-width: 44px;
-text-align: right;
-flex-shrink: 0;
-}
-.bbj-sets {
-display: grid;
-grid-template-columns: repeat(3,1fr);
-gap: 6px;
-margin-top: 14px;
-}
-.bbj-set {
-background: rgba(255,255,255,0.05);
-padding: 8px;
-text-align: center;
-}
-.bbj-set-time {
-font-family: ‘Archivo Black’, sans-serif;
-font-size: 15px;
-color: var(–paper);
-}
-.bbj-set-label {
-font-family: ‘DM Mono’, monospace;
-font-size: 8px;
-color: #555;
-text-transform: uppercase;
-letter-spacing: 0.08em;
-margin-top: 2px;
-}
+.bbj-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 18px; }
+.bbj-time { font-size: 56px; font-weight: 900; line-height: 1; color: var(–red); letter-spacing: -0.02em; }
+.bbj-lbl { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #555; margin-top: 4px; }
+.bbj-r { text-align: right; }
+.bbj-tgt { font-size: 22px; font-weight: 900; color: #aaa; letter-spacing: -0.01em; }
+.bbj-tgt-l { font-size: 9px; color: #555; text-transform: uppercase; letter-spacing: 0.1em; }
+.bbj-ok { font-size: 10px; color: #4caf6a; margin-top: 4px; letter-spacing: 0.05em; }
+.bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.bar-l { font-size: 9px; color: #555; width: 64px; flex-shrink: 0; text-transform: uppercase; letter-spacing: 0.06em; }
+.bar-t { flex: 1; height: 5px; background: rgba(255,255,255,.08); }
+.bar-f { height: 100%; }
+.bar-v { font-size: 10px; color: #666; width: 44px; text-align: right; flex-shrink: 0; }
+.bbj-sets { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; margin-top: 16px; }
+.bbj-set { background: rgba(255,255,255,.05); padding: 9px; text-align: center; }
+.bbj-set-n { font-size: 17px; font-weight: 700; color: #ddd; }
+.bbj-set-l { font-size: 8px; color: #555; text-transform: uppercase; letter-spacing: 0.07em; margin-top: 2px; }
 
-/* ─── STATION LIST ─── */
-.station-list { display: flex; flex-direction: column; gap: 0; }
-.station-item {
-display: flex;
-align-items: stretch;
-border: 1px solid var(–border);
-border-top: none;
-background: var(–warm);
+/* SESSION LOG */
+.log { display: flex; flex-direction: column; }
+.log-i {
+border: 1px solid var(–border); border-top: none;
+padding: 14px 16px; background: var(–paper);
 }
-.station-item:first-child { border-top: 1px solid var(–border); }
-.station-bar {
-width: 3px;
-flex-shrink: 0;
+.log-i:first-child { border-top: 1px solid var(–border); }
+.log-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+.log-d { font-size: 9px; letter-spacing: 0.1em; color: var(–muted); text-transform: uppercase; }
+.log-tag {
+font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase;
+padding: 2px 9px; border-radius: 100px; border: 1.5px solid; font-weight: 500;
 }
-.bar-critical { background: var(–accent); }
-.bar-high { background: var(–gold); }
-.bar-maintain { background: var(–border); }
-.bar-elite { background: var(–accent2); }
-.station-body { padding: 12px 14px; flex: 1; }
-.station-name {
-font-family: ‘Archivo Black’, sans-serif;
-font-size: 12px;
-letter-spacing: 0.03em;
-margin-bottom: 2px;
-}
-.station-rank {
-font-family: ‘DM Mono’, monospace;
-font-size: 9px;
-color: var(–muted);
-letter-spacing: 0.06em;
-margin-bottom: 8px;
-}
-.station-nums {
-display: flex;
-gap: 16px;
-align-items: flex-end;
-flex-wrap: wrap;
-}
-.snum { display: flex; flex-direction: column; gap: 1px; }
-.snum-label {
-font-family: ‘DM Mono’, monospace;
-font-size: 8px;
-letter-spacing: 0.12em;
-text-transform: uppercase;
-color: var(–muted);
-}
-.snum-val {
-font-family: ‘Archivo Black’, sans-serif;
-font-size: 15px;
-line-height: 1;
-}
-.snum-val.pb { color: var(–muted); text-decoration: line-through; text-decoration-color: rgba(212,57,10,0.4); }
-.snum-val.now { color: var(–accent2); }
-.snum-val.target { color: var(–accent); }
-.snum-saving {
-font-family: ‘DM Mono’, monospace;
-font-size: 10px;
-color: var(–accent2);
-align-self: flex-end;
-}
-.station-badge {
-align-self: flex-start;
-margin: 12px 12px 0 0;
-font-family: ‘DM Mono’, monospace;
-font-size: 8px;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-padding: 3px 7px;
-border-radius: 100px;
-border: 1px solid;
-white-space: nowrap;
-}
-.badge-critical { border-color: var(–accent); color: var(–accent); }
-.badge-high { border-color: var(–gold); color: var(–gold); }
-.badge-maintain { border-color: var(–muted); color: var(–muted); }
-.badge-elite { border-color: var(–accent2); color: var(–accent2); }
+.t-run { border-color: #4f7fd4; color: #4f7fd4; }
+.t-sta { border-color: var(–gold); color: var(–gold); }
+.t-sim { border-color: var(–red); color: var(–red); }
+.t-str { border-color: var(–green); color: var(–green); }
+.log-title { font-size: 13px; font-weight: 600; color: var(–ink); margin-bottom: 6px; }
+.log-b { font-size: 11px; color: var(–muted); line-height: 1.75; letter-spacing: 0.01em; }
+.g { color: var(–green); }
+.w { color: var(–red); }
+.b { color: var(–ink); font-weight: 500; }
 
-/* ─── SESSION LOG ─── */
-.log-list { display: flex; flex-direction: column; }
-.log-item {
-border: 1px solid var(–border);
-border-top: none;
-padding: 14px 16px;
-background: var(–paper);
+/* STATIONS */
+.sts { display: flex; flex-direction: column; }
+.st { display: flex; border: 1px solid var(–border); border-top: none; background: var(–warm); }
+.st:first-child { border-top: 1px solid var(–border); }
+.st-bar { width: 3px; flex-shrink: 0; }
+.bc { background: var(–red); }
+.bh { background: var(–gold); }
+.bm { background: var(–border); }
+.be { background: var(–green); }
+.st-bod { padding: 12px 13px; flex: 1; min-width: 0; }
+.st-nm { font-size: 12px; font-weight: 700; color: var(–ink); margin-bottom: 1px; letter-spacing: 0.02em; }
+.st-rk { font-size: 9px; color: var(–muted); letter-spacing: 0.05em; margin-bottom: 8px; }
+.st-ns { display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-end; }
+.sn { display: flex; flex-direction: column; gap: 1px; }
+.sn-l { font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; color: var(–muted); }
+.sn-v { font-size: 15px; font-weight: 800; line-height: 1; color: var(–ink); }
+.sn-v.pb { color: var(–muted); text-decoration: line-through; text-decoration-color: rgba(201,50,8,.4); }
+.sn-v.now { color: var(–green); }
+.sn-v.tgt { color: var(–red); }
+.sn-sav { font-size: 10px; color: var(–green); font-weight: 600; align-self: flex-end; letter-spacing: 0.03em; }
+.st-bdg {
+align-self: flex-start; margin: 12px 12px 0 0;
+font-size: 8px; letter-spacing: 0.09em; text-transform: uppercase;
+padding: 3px 8px; border-radius: 100px; border: 1.5px solid; white-space: nowrap; font-weight: 500;
 }
-.log-item:first-child { border-top: 1px solid var(–border); }
-.log-top {
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-margin-bottom: 6px;
-}
-.log-date {
-font-family: ‘DM Mono’, monospace;
-font-size: 9px;
-letter-spacing: 0.1em;
-color: var(–muted);
-text-transform: uppercase;
-}
-.log-type {
-font-family: ‘DM Mono’, monospace;
-font-size: 8px;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-padding: 2px 8px;
-border-radius: 100px;
-border: 1px solid;
-}
-.type-run { border-color: #6496ff; color: #6496ff; }
-.type-station { border-color: var(–gold); color: var(–gold); }
-.type-sim { border-color: var(–accent); color: var(–accent); }
-.type-strength { border-color: var(–accent2); color: var(–accent2); }
-.log-title {
-font-family: ‘Archivo’, sans-serif;
-font-weight: 500;
-font-size: 13px;
-margin-bottom: 6px;
-}
-.log-body {
-font-family: ‘DM Mono’, monospace;
-font-size: 10px;
-color: var(–muted);
-line-height: 1.7;
-letter-spacing: 0.02em;
-}
-.log-body .g { color: var(–accent2); }
-.log-body .w { color: var(–accent); }
-.log-body .b { color: var(–text); font-weight: 400; }
+.bd-c { border-color: var(–red); color: var(–red); }
+.bd-h { border-color: var(–gold); color: var(–gold); }
+.bd-m { border-color: var(–muted); color: var(–muted); }
+.bd-e { border-color: var(–green); color: var(–green); }
 
-/* ─── RUN PACING ─── */
-.pace-table { width: 100%; border-collapse: collapse; }
-.pace-table th {
-font-family: ‘DM Mono’, monospace;
-font-size: 8px;
-letter-spacing: 0.14em;
-text-transform: uppercase;
-color: var(–muted);
-text-align: left;
-padding: 6px 10px;
-border-bottom: 1px solid var(–border);
-font-weight: 400;
-}
-.pace-table td {
-font-family: ‘DM Mono’, monospace;
-font-size: 11px;
-padding: 9px 10px;
-border-bottom: 1px solid rgba(0,0,0,0.04);
-vertical-align: top;
-}
-.pace-table tr:last-child td { border-bottom: none; }
-.td-bad { color: var(–accent); }
-.td-good { color: var(–accent2); }
-.td-muted { color: var(–muted); }
-.td-target { color: var(–ink); font-weight: 500; }
+/* PACE TABLE */
+.pace-wrap { background: var(–warm); border: 1px solid var(–border); overflow: hidden; }
+table { width: 100%; border-collapse: collapse; }
+th { font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase; color: var(–muted); text-align: left; padding: 8px 10px; border-bottom: 1px solid var(–border); font-weight: 500; }
+td { font-size: 11px; padding: 9px 10px; border-bottom: 1px solid rgba(0,0,0,.04); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+.td-r { color: var(–red); }
+.td-g { color: var(–green); }
+.td-m { color: var(–muted); }
 
-/* ─── WALL BALLS PROTOCOL ─── */
-.protocol-list { display: flex; flex-direction: column; gap: 0; }
-.protocol-step {
-display: flex;
-gap: 14px;
-padding: 12px 0;
-border-bottom: 1px solid var(–border);
-align-items: flex-start;
-}
-.protocol-step:last-child { border-bottom: none; }
-.step-num {
-font-family: ‘Archivo Black’, sans-serif;
-font-size: 22px;
-color: var(–border);
-line-height: 1;
-width: 28px;
-flex-shrink: 0;
-}
-.step-text {
-font-family: ‘Archivo’, sans-serif;
-font-size: 12px;
-color: var(–text);
-line-height: 1.5;
-font-weight: 300;
-padding-top: 3px;
-}
-.step-text strong { font-weight: 500; color: var(–ink); }
+/* PROTOCOL */
+.proto { background: var(–warm); border: 1px solid var(–border); padding: 0 16px; }
+.p-step { display: flex; gap: 14px; padding: 13px 0; border-bottom: 1px solid var(–border); align-items: flex-start; }
+.p-step:last-child { border-bottom: none; }
+.p-n { font-size: 28px; font-weight: 900; color: var(–border); line-height: 1; width: 28px; flex-shrink: 0; letter-spacing: -0.02em; }
+.p-t { font-size: 12px; color: var(–text); line-height: 1.55; padding-top: 5px; font-weight: 400; }
+.p-t strong { font-weight: 600; color: var(–ink); }
 
-/* ─── DIVIDER ─── */
-.divider {
-height: 1px;
-background: var(–border);
-margin: 28px 24px 0;
-}
+/* FOOTER */
+.footer { padding: 24px 20px 40px; border-top: 1px solid var(–border); margin-top: 28px; }
+.f-name { font-size: 16px; font-weight: 800; color: var(–ink); margin-bottom: 4px; letter-spacing: -0.01em; }
+.f-note { font-size: 10px; color: var(–muted); letter-spacing: 0.07em; line-height: 1.85; }
 
-/* ─── FOOTER ─── */
-.footer {
-padding: 24px 24px 40px;
-display: flex;
-flex-direction: column;
-gap: 6px;
-}
-.footer-name {
-font-family: ‘Archivo Black’, sans-serif;
-font-size: 15px;
-letter-spacing: 0.02em;
-color: var(–ink);
-}
-.footer-note {
-font-family: ‘DM Mono’, monospace;
-font-size: 10px;
-color: var(–muted);
-letter-spacing: 0.06em;
-}
-
-/* animations */
-.fade-in {
-opacity: 0;
-transform: translateY(12px);
-animation: fadeIn 0.5s ease forwards;
-}
-@keyframes fadeIn {
-to { opacity: 1; transform: none; }
-}
-.fade-in:nth-child(1) { animation-delay: 0.05s; }
-.fade-in:nth-child(2) { animation-delay: 0.1s; }
-.fade-in:nth-child(3) { animation-delay: 0.15s; }
-.fade-in:nth-child(4) { animation-delay: 0.2s; }
-.fade-in:nth-child(5) { animation-delay: 0.25s; }
-.fade-in:nth-child(6) { animation-delay: 0.3s; }
-.fade-in:nth-child(7) { animation-delay: 0.35s; }
-.fade-in:nth-child(8) { animation-delay: 0.4s; }
+.mt10 { margin-top: 10px; }
+.divider { height: 1px; background: var(–border); margin: 28px 20px 0; }
 </style>
 
 </head>
 <body>
+<div class="wrap">
 
-<!-- MASTHEAD -->
-
-<div class="masthead fade-in">
-<div class="masthead-label">Hyrox Delhi · 14-Week Training Log</div>
-<div class="masthead-name">Sumegha<em>Khilnani</em></div>
-<div class="masthead-race">July 26 2026 · Delhi · Week 4 of 14</div>
+<div class="mast">
+<div class="mast-eye">Hyrox Delhi &middot; 14-Week Training Log</div>
+<div class="mast-name">Sumegha<br><span>Khilnani</span></div>
+<div class="mast-sub">July 26 2026 &middot; Delhi &middot; Week 4 of 14</div>
 </div>
 
-<!-- COUNTDOWN -->
-
-<div class="countdown fade-in">
-<div class="cd-unit">
-<span class="cd-num" id="cd-days">—</span>
-<span class="cd-label">Days</span>
-</div>
-<div class="cd-unit">
-<span class="cd-num" id="cd-hrs">—</span>
-<span class="cd-label">Hours</span>
-</div>
-<div class="cd-unit">
-<span class="cd-num" id="cd-min">—</span>
-<span class="cd-label">Mins</span>
-</div>
+<div class="cd">
+<div class="cd-u"><span class="cd-n" id="d">-</span><span class="cd-l">Days</span></div>
+<div class="cd-u"><span class="cd-n" id="h">-</span><span class="cd-l">Hours</span></div>
+<div class="cd-u"><span class="cd-n" id="m">-</span><span class="cd-l">Mins</span></div>
 </div>
 
-<!-- GOAL CHIPS -->
-
-<div class="goal-strip fade-in">
-<div class="goal-chip chip-pb">PB 2:03:41</div>
-<div class="goal-chip chip-goal">Goal Sub 1:50</div>
-<div class="goal-chip chip-stretch">Stretch Sub 1:45</div>
+<div class="chips">
+<div class="chip c-pb">PB 2:03:41</div>
+<div class="chip c-goal">Goal Sub 1:50</div>
+<div class="chip c-str">Stretch Sub 1:45</div>
 </div>
 
-<!-- PROGRESS -->
-
-<div class="section fade-in">
-<div class="section-head">
-<div class="section-title">Plan Progress</div>
-<div class="section-sub">Wk 4 / 14</div>
-</div>
+<div class="sec">
+<div class="sec-hd"><div class="sec-t">Plan Progress</div><div class="sec-s">Wk 4 / 14</div></div>
 <div class="prog-bar"><div class="prog-fill"></div></div>
-<div class="prog-label">
-<span>21% complete</span>
-<span>Race Jul 26 Delhi</span>
-</div>
-<div class="week-grid">
-<div class="wk done"><div class="wk-num">1</div><div class="wk-tag">BASE</div></div>
-<div class="wk done"><div class="wk-num">2</div><div class="wk-tag">BASE</div></div>
-<div class="wk done"><div class="wk-num">3</div><div class="wk-tag">BUILD</div></div>
-<div class="wk now"><div class="wk-num">4</div><div class="wk-tag">BUILD</div></div>
-<div class="wk"><div class="wk-num">5</div><div class="wk-tag">BUILD</div></div>
-<div class="wk"><div class="wk-num">6</div><div class="wk-tag">BUILD</div></div>
-<div class="wk deload"><div class="wk-num">7</div><div class="wk-tag">DELOAD</div></div>
-<div class="wk"><div class="wk-num">8</div><div class="wk-tag">SPEC</div></div>
-<div class="wk"><div class="wk-num">9</div><div class="wk-tag">SPEC</div></div>
-<div class="wk"><div class="wk-num">10</div><div class="wk-tag">SPEC</div></div>
-<div class="wk"><div class="wk-num">11</div><div class="wk-tag">SPEC</div></div>
-<div class="wk"><div class="wk-num">12</div><div class="wk-tag">PEAK</div></div>
-<div class="wk"><div class="wk-num">13</div><div class="wk-tag">TAPER</div></div>
-<div class="wk"><div class="wk-num">14</div><div class="wk-tag">TAPER</div></div>
+<div class="prog-meta"><span>28% complete</span><span>Race Jul 26 Delhi</span></div>
+<div class="wk-grid">
+<div class="wk done"><div class="wk-n">1</div><div class="wk-t">BASE</div></div>
+<div class="wk done"><div class="wk-n">2</div><div class="wk-t">BASE</div></div>
+<div class="wk done"><div class="wk-n">3</div><div class="wk-t">BUILD</div></div>
+<div class="wk now"><div class="wk-n">4</div><div class="wk-t">BUILD</div></div>
+<div class="wk"><div class="wk-n">5</div><div class="wk-t">BUILD</div></div>
+<div class="wk"><div class="wk-n">6</div><div class="wk-t">BUILD</div></div>
+<div class="wk deload"><div class="wk-n">7</div><div class="wk-t">DELOAD</div></div>
+<div class="wk"><div class="wk-n">8</div><div class="wk-t">SPEC</div></div>
+<div class="wk"><div class="wk-n">9</div><div class="wk-t">SPEC</div></div>
+<div class="wk"><div class="wk-n">10</div><div class="wk-t">SPEC</div></div>
+<div class="wk"><div class="wk-n">11</div><div class="wk-t">SPEC</div></div>
+<div class="wk"><div class="wk-n">12</div><div class="wk-t">PEAK</div></div>
+<div class="wk"><div class="wk-n">13</div><div class="wk-t">TAPER</div></div>
+<div class="wk"><div class="wk-n">14</div><div class="wk-t">TAPER</div></div>
 </div>
 </div>
 
-<!-- MONITORING -->
-
-<div class="section fade-in">
-<div class="section-head">
-<div class="section-title">Monitoring</div>
-<div class="section-sub">Knee · HRV</div>
-</div>
-<div class="alert-card" style="margin-bottom:10px">
-<div class="alert-title">⚠ Knee — Active Watch</div>
-<div class="alert-body">Mild lateral irritation (1/10) after Sim Block A (May 10) and Z2 row day (May 8) — two consecutive days flagged. Same location as Week 1. Rehab non-negotiable. If it persists into W4, swap intervals for easy run + full rehab.</div>
+<div class="sec">
+<div class="sec-hd"><div class="sec-t">Monitoring</div><div class="sec-s">Knee &middot; HRV</div></div>
+<div class="alert-card">
+<div class="alert-t">Knee &mdash; Active Watch</div>
+<div class="alert-b">Mild lateral irritation (1/10) after Sim Block A (May 10) and Z2 row (May 8) &mdash; two consecutive days. Same location as Week 1. Rehab non-negotiable. Persists into W4: swap intervals for easy run + full rehab.</div>
 </div>
 <div class="note-card">
-<div class="note-body">HRV baseline 55–76ms. 7-day avg trending below baseline for ~2 weeks. Trust HRV over body battery during build phase. Week 7 deload is the scheduled reset.</div>
+<div class="note-b">HRV baseline 55&ndash;76ms. 7-day avg trending below baseline for ~2 weeks. Trust HRV over body battery during build phase. Week 7 deload is the scheduled reset.</div>
 </div>
 </div>
 
-<!-- WHERE TIME COMES FROM -->
-
-<div class="section fade-in">
-<div class="section-head">
-<div class="section-title">Where −13:41 comes from</div>
-<div class="section-sub">Vs Bengaluru PB</div>
-</div>
-<div class="savings-row">
-<div class="saving-card">
-<div class="saving-num" style="color:var(--accent)">−4:50</div>
-<div class="saving-label">BBJ<br>12:50 → sub 8:00</div>
-</div>
-<div class="saving-card">
-<div class="saving-num" style="color:var(--gold)">−2:34</div>
-<div class="saving-label">Wall Balls<br>8:34 → sub 6:00</div>
-</div>
-<div class="saving-card">
-<div class="saving-num" style="color:var(--ink)">−8:08</div>
-<div class="saving-label">Runs<br>7:46 → 6:45/km avg</div>
-</div>
-<div class="saving-card">
-<div class="saving-num" style="color:var(--muted)">−1:30</div>
-<div class="saving-label">Transitions<br>smoother flow</div>
-</div>
+<div class="sec">
+<div class="sec-hd"><div class="sec-t">Where &minus;13:41 comes from</div><div class="sec-s">vs Bengaluru PB</div></div>
+<div class="savings">
+<div class="sav"><div class="sav-n" style="color:var(--red)">&minus;4:50</div><div class="sav-l">BBJ<br>12:50 &rarr; sub 8:00</div></div>
+<div class="sav"><div class="sav-n" style="color:var(--gold)">&minus;2:34</div><div class="sav-l">Wall Balls<br>8:34 &rarr; sub 6:00</div></div>
+<div class="sav"><div class="sav-n" style="color:var(--ink)">&minus;8:08</div><div class="sav-l">Runs<br>7:46 &rarr; 6:45/km avg</div></div>
+<div class="sav"><div class="sav-n" style="color:var(--muted)">&minus;1:30</div><div class="sav-l">Transitions<br>smoother flow</div></div>
 </div>
 </div>
 
-<!-- BBJ -->
-
-<div class="section fade-in">
-<div class="section-head">
-<div class="section-title">BBJ — The Race</div>
-<div class="section-sub">80m · #1 priority</div>
-</div>
-<div class="bbj-card">
+<div class="sec">
+<div class="sec-hd"><div class="sec-t">BBJ &mdash; The Race</div><div class="sec-s">80m &middot; #1 priority</div></div>
+<div class="bbj">
 <div class="bbj-top">
 <div>
 <div class="bbj-time">6:09</div>
-<div class="bbj-sublabel">W3 · 50 reps · work time</div>
+<div class="bbj-lbl">W3 &middot; 50 reps &middot; work time</div>
 </div>
-<div class="bbj-right">
-<div class="bbj-target-num">Sub 8:00</div>
-<div class="bbj-target-label">Race target</div>
-<div class="bbj-under">✓ Already under</div>
+<div class="bbj-r">
+<div class="bbj-tgt">Sub 8:00</div>
+<div class="bbj-tgt-l">Race target</div>
+<div class="bbj-ok">&#10003; Already under</div>
 </div>
 </div>
-<div class="bbj-bar-row">
-<div class="bbj-bar-label">Bengaluru</div>
-<div class="bbj-bar-track"><div class="bbj-bar-fill" style="width:100%;background:rgba(212,57,10,0.5)"></div></div>
-<div class="bbj-bar-val">12:50</div>
+<div class="bar-row">
+<div class="bar-l">Bengaluru</div>
+<div class="bar-t"><div class="bar-f" style="width:100%;background:rgba(201,50,8,.5)"></div></div>
+<div class="bar-v">12:50</div>
 </div>
-<div class="bbj-bar-row">
-<div class="bbj-bar-label">W3 Work</div>
-<div class="bbj-bar-track"><div class="bbj-bar-fill" style="width:48%;background:rgba(76,175,80,0.7)"></div></div>
-<div class="bbj-bar-val">6:09 ✓</div>
+<div class="bar-row">
+<div class="bar-l">W3 work</div>
+<div class="bar-t"><div class="bar-f" style="width:48%;background:rgba(76,175,106,.7)"></div></div>
+<div class="bar-v">6:09 &#10003;</div>
 </div>
-<div class="bbj-bar-row">
-<div class="bbj-bar-label">Target</div>
-<div class="bbj-bar-track"><div class="bbj-bar-fill" style="width:62%;background:rgba(255,255,255,0.15);border-right:2px solid rgba(255,255,255,0.4)"></div></div>
-<div class="bbj-bar-val">&lt;8:00</div>
+<div class="bar-row">
+<div class="bar-l">Target</div>
+<div class="bar-t"><div class="bar-f" style="width:62%;background:rgba(255,255,255,.1);border-right:2px solid rgba(255,255,255,.3)"></div></div>
+<div class="bar-v">&lt;8:00</div>
 </div>
 <div class="bbj-sets">
-<div class="bbj-set">
-<div class="bbj-set-time">2:26</div>
-<div class="bbj-set-label">Set 1 · 20 reps</div>
-</div>
-<div class="bbj-set">
-<div class="bbj-set-time">2:37</div>
-<div class="bbj-set-label">Set 2 · 20 reps</div>
-</div>
-<div class="bbj-set">
-<div class="bbj-set-time">1:06</div>
-<div class="bbj-set-label">Set 3 · 10 reps</div>
-</div>
+<div class="bbj-set"><div class="bbj-set-n">2:26</div><div class="bbj-set-l">Set 1 &middot; 20r</div></div>
+<div class="bbj-set"><div class="bbj-set-n">2:37</div><div class="bbj-set-l">Set 2 &middot; 20r</div></div>
+<div class="bbj-set"><div class="bbj-set-n">1:06</div><div class="bbj-set-l">Set 3 &middot; 10r</div></div>
 </div>
 </div>
 </div>
 
-<!-- SESSION LOG -->
-
-<div class="section fade-in">
-<div class="section-head">
-<div class="section-title">Session Log</div>
-<div class="section-sub">Most recent first</div>
+<div class="sec">
+<div class="sec-hd"><div class="sec-t">Session Log</div><div class="sec-s">Most recent first</div></div>
+<div class="log">
+<div class="log-i">
+<div class="log-top"><div class="log-d">May 12 &middot; Week 4</div><div class="log-tag t-run">Z2 Run</div></div>
+<div class="log-title">Z2 Long Run &mdash; 10km</div>
+<div class="log-b">Avg <span class="w">9:36/km</span> &middot; HR avg <span class="g">142</span> / max 150 &middot; <span class="g">100% Z2</span> &middot; Total 1:35:59<br>Splits: 8:44/9:22/9:19/9:35/9:31/9:41/9:38/9:48/9:48/10:13<br>Pace faded, HR flat = <span class="g">correct Z2</span> &middot; Knee 0.5/10 post-run</div>
 </div>
-<div class="log-list">
-
-```
-<div class="log-item">
-<div class="log-top">
-<div class="log-date">May 12 · Week 4</div>
-<div class="log-type type-run">Z2 Run</div>
+<div class="log-i">
+<div class="log-top"><div class="log-d">May 11 &middot; Week 4</div><div class="log-tag t-str">Strength</div></div>
+<div class="log-title">Lower Body + Rehab</div>
+<div class="log-b">Bulgarian Split Squats &middot; DB RDL &middot; Goblet Sumo 12x3 &middot; Tabata &middot; Calf raises<br>Rehab: clamshells 15x2 &middot; abductor raises 15x2 &middot; flexor raises 15x2<br>Knee good &middot; <span class="w">Left glute overactivating vs right</span> &mdash; possibly linked to lateral irritation</div>
 </div>
-<div class="log-title">Z2 Long Run — 10km</div>
-<div class="log-body">
-Avg pace <span class="w">9:36/km</span> · HR avg <span class="g">142</span> / max 150 · <span class="g">100% Z2</span> · Total 1:35:59<br>
-Splits: 8:44 / 9:22 / 9:19 / 9:35 / 9:31 / 9:41 / 9:38 / 9:48 / 9:48 / 10:13<br>
-Pace faded, HR stayed flat = <span class="g">correct Z2 execution</span><br>
-Knee very mild post-run (0.5/10)
-</div>
-</div>
-
-<div class="log-item">
-<div class="log-top">
-<div class="log-date">May 11 · Week 4</div>
-<div class="log-type type-strength">Strength</div>
-</div>
-<div class="log-title">Lower Body Strength + Rehab</div>
-<div class="log-body">
-Bulgarian Split Squats · DB RDL · Goblet Sumo Squat 12×3 · Tabata · Calf raises<br>
-Rehab: clamshells 15×2 · abductor raises 15×2 · flexor raises 15×2<br>
-Knee good · <span class="w">Left glute overactivating vs right during clamshells</span> — possibly linked to lateral knee irritation
-</div>
-</div>
-
-<div class="log-item">
-<div class="log-top">
-<div class="log-date">May 10 · Week 3</div>
-<div class="log-type type-sim">Sim</div>
-</div>
+<div class="log-i">
+<div class="log-top"><div class="log-d">May 10 &middot; Week 3</div><div class="log-tag t-sim">Sim</div></div>
 <div class="log-title">Sim Block A</div>
-<div class="log-body">
-R1: <span class="w">6:47/km</span> (target 7:15 — went out too fast again) · Ski 1000m: <span class="g">5:18</span> (PB 5:58)<br>
-R2: <span class="g">7:01/km</span> · Row 1000m: <span class="g">4:50</span> (PB 5:56) · R3: 6:47/km<br>
-Wall Balls 30 reps: <span class="g">1:42</span> · sets 15/10/5 · breathing protocol held<br>
-HR avg 163, max 179 · Cadence 155–165<br>
-<span class="w">⚠ Knee 1/10 post-sim · Farmers Carry skipped</span>
+<div class="log-b">R1 <span class="w">6:47/km</span> (target 7:15 &mdash; too fast again) &middot; Ski 1000m <span class="g">5:18</span> (PB 5:58)<br>R2 <span class="g">7:01</span> &middot; Row 1000m <span class="g">4:50</span> (PB 5:56) &middot; R3 6:47<br>Wall Balls 30r <span class="g">1:42</span> &middot; protocol held &middot; HR avg 163/179<br><span class="w">Knee 1/10 post-sim &middot; Farmers Carry skipped</span></div>
 </div>
-</div>
-
-<div class="log-item">
-<div class="log-top">
-<div class="log-date">May 8 · Week 3</div>
-<div class="log-type type-station">Station</div>
-</div>
+<div class="log-i">
+<div class="log-top"><div class="log-d">May 8 &middot; Week 3</div><div class="log-tag t-sta">Station</div></div>
 <div class="log-title">BBJ + Ski + Wall Balls</div>
-<div class="log-body">
-BBJ 50 reps: <span class="g">6:09 work time</span> · sets 20/20/10 (2:26/2:37/1:06) · rest ~1:26<br>
-Ski 3×500m: 2:24/2:34/2:30 (target &lt;2:20, slightly over)<br>
-Wall Balls 65 reps: <span class="g">4:27</span> · sets 25/20/20 · breathing protocol held<br>
-HR avg 145, max 191 · Knee solid · No sled available<br>
-<span class="w">⚠ Mild knee irritation on Z2 row day — two consecutive days flagged</span>
+<div class="log-b">BBJ 50r: <span class="g">6:09 work time</span> &middot; sets 20/20/10 (2:26/2:37/1:06) &middot; rest ~1:26<br>Ski 3x500m: 2:24/2:34/2:30 &middot; Wall Balls 65r: <span class="g">4:27</span><br>HR avg 145/191 &middot; Knee solid &middot; No sled available</div>
 </div>
+<div class="log-i">
+<div class="log-top"><div class="log-d">May 5 &middot; Week 3</div><div class="log-tag t-run">Run</div></div>
+<div class="log-title">Tempo 5km &mdash; Strava PR</div>
+<div class="log-b">Avg <span class="g">6:55/km</span> &middot; HR 166/182 &middot; Cadence 154<br>Laps: 7:07/6:59/6:55/6:55/<span class="g">6:42</span> (negative split)<br>Jun '25: same pace at 170bpm &rarr; now at <span class="g">166bpm = fitness up</span></div>
 </div>
-
-<div class="log-item">
-<div class="log-top">
-<div class="log-date">May 5 · Week 3</div>
-<div class="log-type type-run">Run</div>
+<div class="log-i">
+<div class="log-top"><div class="log-d">Apr 30 &middot; Week 2</div><div class="log-tag t-run">Run</div></div>
+<div class="log-title">Intervals &mdash; 5x800m</div>
+<div class="log-b">Splits: 6:26/6:28/6:37/6:38/<span class="w">6:57</span> &middot; Target 6:40/km<br>Reps 1&ndash;2 hot, Rep 5 faded &middot; HR avg 164/179<br><span class="b">Lesson: even splits from rep 1</span></div>
 </div>
-<div class="log-title">Tempo 5km — Strava PR</div>
-<div class="log-body">
-Avg pace: <span class="g">6:55/km</span> · HR 166 avg / 182 max · Cadence 154<br>
-Laps: 7:07 / 6:59 / 6:55 / 6:55 / <span class="g">6:42</span> (negative split ✓)<br>
-Jun '25 same pace at 170bpm → now at <span class="g">166bpm = fitness improving</span>
-</div>
-</div>
-
-<div class="log-item">
-<div class="log-top">
-<div class="log-date">Apr 30 · Week 2</div>
-<div class="log-type type-run">Run</div>
-</div>
-<div class="log-title">Intervals — 5×800m</div>
-<div class="log-body">
-Splits: 6:26 / 6:28 / 6:37 / 6:38 / <span class="w">6:57</span> · Target 6:40/km<br>
-Reps 1–2 hot, Rep 5 faded · HR avg 164, max 179 · Cadence 138<br>
-Lesson: <span class="b">even splits from rep 1</span> · Knee great
-</div>
-</div>
-
-<div class="log-item">
-<div class="log-top">
-<div class="log-date">Apr 22–25 · Week 1</div>
-<div class="log-type type-station">Station + Run</div>
-</div>
+<div class="log-i">
+<div class="log-top"><div class="log-d">Apr 19&ndash;25 &middot; Week 1</div><div class="log-tag t-sta">Mixed</div></div>
 <div class="log-title">Week 1 Complete</div>
-<div class="log-body">
-Intervals 4×800m · Stations: Ski 500m + BBJ circuits (4:44/5:23/5:36)<br>
-Z2 7km: 9:22/km · HR avg 143 (Z2 confirmed) · Garmin zones validated<br>
-<span class="w">Mild knee irritation post-intervals — resolved by morning</span>
+<div class="log-b">4x800m intervals &middot; Stations: Ski 500m + BBJ (4:44/5:23/5:36)<br>Z2 7km: 9:22/km &middot; HR avg 143 &middot; Garmin Z2 confirmed<br><span class="w">Mild knee irritation post-intervals &mdash; resolved AM</span></div>
 </div>
-</div>
-```
-
 </div>
 </div>
 
-<!-- STATIONS -->
-
-<div class="section fade-in">
-<div class="section-head">
-<div class="section-title">Station Targets</div>
-<div class="section-sub">PB → Race Day</div>
-</div>
-<div class="station-list">
-
-```
-<div class="station-item">
-<div class="station-bar bar-critical"></div>
-<div class="station-body">
-<div class="station-name">Burpee Broad Jump</div>
-<div class="station-rank">Bengaluru #512 — biggest opportunity</div>
-<div class="station-nums">
-<div class="snum"><div class="snum-label">PB</div><div class="snum-val pb">12:50</div></div>
-<div class="snum"><div class="snum-label">W3 Work</div><div class="snum-val now">6:09</div></div>
-<div class="snum"><div class="snum-label">Race</div><div class="snum-val target">Sub 8:00</div></div>
-<div class="snum-saving">−4:50</div>
-</div>
-</div>
-<div class="station-badge badge-critical">Critical</div>
-</div>
-
-<div class="station-item">
-<div class="station-bar bar-high"></div>
-<div class="station-body">
-<div class="station-name">Wall Balls</div>
-<div class="station-rank">Bengaluru #155 — fixable with breathing</div>
-<div class="station-nums">
-<div class="snum"><div class="snum-label">PB</div><div class="snum-val pb">8:34</div></div>
-<div class="snum"><div class="snum-label">W3 (65r)</div><div class="snum-val now">4:27</div></div>
-<div class="snum"><div class="snum-label">Race</div><div class="snum-val target">Sub 6:00</div></div>
-<div class="snum-saving">−2:34</div>
-</div>
-</div>
-<div class="station-badge badge-high">High</div>
-</div>
-
-<div class="station-item">
-<div class="station-bar bar-maintain"></div>
-<div class="station-body">
-<div class="station-name">Ski Erg 1000m</div>
-<div class="station-rank">Bengaluru #189</div>
-<div class="station-nums">
-<div class="snum"><div class="snum-label">PB</div><div class="snum-val pb">5:58</div></div>
-<div class="snum"><div class="snum-label">W3 Sim</div><div class="snum-val now">5:18</div></div>
-<div class="snum"><div class="snum-label">Race</div><div class="snum-val target">Sub 5:30</div></div>
-</div>
-</div>
-<div class="station-badge badge-maintain">Maintain</div>
-</div>
-
-<div class="station-item">
-<div class="station-bar bar-maintain"></div>
-<div class="station-body">
-<div class="station-name">Row 1000m</div>
-<div class="station-rank">Bengaluru #93</div>
-<div class="station-nums">
-<div class="snum"><div class="snum-label">PB</div><div class="snum-val pb">5:56</div></div>
-<div class="snum"><div class="snum-label">W3 Sim</div><div class="snum-val now">4:50</div></div>
-<div class="snum"><div class="snum-label">Race</div><div class="snum-val target">Sub 5:40</div></div>
-</div>
-</div>
-<div class="station-badge badge-maintain">Strong</div>
-</div>
-
-<div class="station-item">
-<div class="station-bar bar-maintain"></div>
-<div class="station-body">
-<div class="station-name">Sled Push 50m</div>
-<div class="station-rank">Bengaluru #60 — strong</div>
-<div class="station-nums">
-<div class="snum"><div class="snum-label">PB</div><div class="snum-val pb">3:09</div></div>
-<div class="snum"><div class="snum-label">Race</div><div class="snum-val target">Sub 3:00</div></div>
-</div>
-</div>
-<div class="station-badge badge-maintain">Maintain</div>
-</div>
-
-<div class="station-item">
-<div class="station-bar bar-maintain"></div>
-<div class="station-body">
-<div class="station-name">Sled Pull 50m</div>
-<div class="station-rank">Bengaluru #34 — very strong</div>
-<div class="station-nums">
-<div class="snum"><div class="snum-label">PB</div><div class="snum-val pb">6:01</div></div>
-<div class="snum"><div class="snum-label">Race</div><div class="snum-val target">Sub 5:45</div></div>
-</div>
-</div>
-<div class="station-badge badge-maintain">Maintain</div>
-</div>
-
-<div class="station-item">
-<div class="station-bar bar-maintain"></div>
-<div class="station-body">
-<div class="station-name">Farmers Carry 200m</div>
-<div class="station-rank">Bengaluru #82</div>
-<div class="station-nums">
-<div class="snum"><div class="snum-label">PB</div><div class="snum-val pb">2:26</div></div>
-<div class="snum"><div class="snum-label">Race</div><div class="snum-val target">Sub 2:20</div></div>
-</div>
-</div>
-<div class="station-badge badge-maintain">Maintain</div>
-</div>
-
-<div class="station-item">
-<div class="station-bar bar-elite"></div>
-<div class="station-body">
-<div class="station-name">Sandbag Lunge 100m</div>
-<div class="station-rank">Bengaluru #7 — elite</div>
-<div class="station-nums">
-<div class="snum"><div class="snum-label">PB</div><div class="snum-val pb">3:46</div></div>
-<div class="snum"><div class="snum-label">Race</div><div class="snum-val target">Sub 3:40</div></div>
-</div>
-</div>
-<div class="station-badge badge-elite">Elite #7</div>
-</div>
-```
-
+<div class="sec">
+<div class="sec-hd"><div class="sec-t">Station Targets</div><div class="sec-s">PB &rarr; Race Day</div></div>
+<div class="sts">
+<div class="st"><div class="st-bar bc"></div><div class="st-bod"><div class="st-nm">Burpee Broad Jump</div><div class="st-rk">Bengaluru #512 &mdash; biggest opportunity</div><div class="st-ns"><div class="sn"><div class="sn-l">PB</div><div class="sn-v pb">12:50</div></div><div class="sn"><div class="sn-l">W3 Work</div><div class="sn-v now">6:09</div></div><div class="sn"><div class="sn-l">Race</div><div class="sn-v tgt">Sub 8:00</div></div><div class="sn-sav">&minus;4:50</div></div></div><div class="st-bdg bd-c">Critical</div></div>
+<div class="st"><div class="st-bar bh"></div><div class="st-bod"><div class="st-nm">Wall Balls</div><div class="st-rk">Bengaluru #155 &mdash; fixable with breathing</div><div class="st-ns"><div class="sn"><div class="sn-l">PB</div><div class="sn-v pb">8:34</div></div><div class="sn"><div class="sn-l">W3 (65r)</div><div class="sn-v now">4:27</div></div><div class="sn"><div class="sn-l">Race</div><div class="sn-v tgt">Sub 6:00</div></div><div class="sn-sav">&minus;2:34</div></div></div><div class="st-bdg bd-h">High</div></div>
+<div class="st"><div class="st-bar bm"></div><div class="st-bod"><div class="st-nm">Ski Erg 1000m</div><div class="st-rk">Bengaluru #189</div><div class="st-ns"><div class="sn"><div class="sn-l">PB</div><div class="sn-v pb">5:58</div></div><div class="sn"><div class="sn-l">W3 Sim</div><div class="sn-v now">5:18</div></div><div class="sn"><div class="sn-l">Race</div><div class="sn-v tgt">Sub 5:30</div></div></div></div><div class="st-bdg bd-m">Maintain</div></div>
+<div class="st"><div class="st-bar bm"></div><div class="st-bod"><div class="st-nm">Row 1000m</div><div class="st-rk">Bengaluru #93</div><div class="st-ns"><div class="sn"><div class="sn-l">PB</div><div class="sn-v pb">5:56</div></div><div class="sn"><div class="sn-l">W3 Sim</div><div class="sn-v now">4:50</div></div><div class="sn"><div class="sn-l">Race</div><div class="sn-v tgt">Sub 5:40</div></div></div></div><div class="st-bdg bd-m">Strong</div></div>
+<div class="st"><div class="st-bar bm"></div><div class="st-bod"><div class="st-nm">Sled Push 50m</div><div class="st-rk">Bengaluru #60 &mdash; strong</div><div class="st-ns"><div class="sn"><div class="sn-l">PB</div><div class="sn-v pb">3:09</div></div><div class="sn"><div class="sn-l">Race</div><div class="sn-v tgt">Sub 3:00</div></div></div></div><div class="st-bdg bd-m">Maintain</div></div>
+<div class="st"><div class="st-bar bm"></div><div class="st-bod"><div class="st-nm">Sled Pull 50m</div><div class="st-rk">Bengaluru #34 &mdash; very strong</div><div class="st-ns"><div class="sn"><div class="sn-l">PB</div><div class="sn-v pb">6:01</div></div><div class="sn"><div class="sn-l">Race</div><div class="sn-v tgt">Sub 5:45</div></div></div></div><div class="st-bdg bd-m">Maintain</div></div>
+<div class="st"><div class="st-bar bm"></div><div class="st-bod"><div class="st-nm">Farmers Carry 200m</div><div class="st-rk">Bengaluru #82</div><div class="st-ns"><div class="sn"><div class="sn-l">PB</div><div class="sn-v pb">2:26</div></div><div class="sn"><div class="sn-l">Race</div><div class="sn-v tgt">Sub 2:20</div></div></div></div><div class="st-bdg bd-m">Maintain</div></div>
+<div class="st"><div class="st-bar be"></div><div class="st-bod"><div class="st-nm">Sandbag Lunge 100m</div><div class="st-rk">Bengaluru #7 &mdash; elite</div><div class="st-ns"><div class="sn"><div class="sn-l">PB</div><div class="sn-v pb">3:46</div></div><div class="sn"><div class="sn-l">Race</div><div class="sn-v tgt">Sub 3:40</div></div></div></div><div class="st-bdg bd-e">Elite #7</div></div>
 </div>
 </div>
 
-<!-- RACE PACING -->
-
-<div class="section fade-in">
-<div class="section-head">
-<div class="section-title">Race Day Pacing</div>
-<div class="section-sub">Delhi · Jul 26</div>
-</div>
-<div style="background:var(--warm);border:1px solid var(--border);overflow:hidden">
-<table class="pace-table">
-<thead>
-<tr>
-<th>Run</th>
-<th>Bengaluru</th>
-<th>Target</th>
-<th>Note</th>
-</tr>
-</thead>
+<div class="sec">
+<div class="sec-hd"><div class="sec-t">Race Day Pacing</div><div class="sec-s">Delhi &middot; Jul 26</div></div>
+<div class="pace-wrap">
+<table>
+<thead><tr><th>Run</th><th>Bengaluru</th><th>Target</th><th>Note</th></tr></thead>
 <tbody>
-<tr>
-<td>R1</td>
-<td class="td-bad">8:00 #495</td>
-<td class="td-target">7:00/km</td>
-<td class="td-muted">Hold back. Resist crowd.</td>
-</tr>
-<tr>
-<td>R2–3</td>
-<td class="td-muted">7:39–7:40</td>
-<td class="td-target">6:45/km</td>
-<td class="td-muted">Settle in. Easy first 100m.</td>
-</tr>
-<tr>
-<td>R4–6</td>
-<td class="td-muted">7:39–7:54</td>
-<td class="td-target">6:40/km</td>
-<td class="td-muted">Race pace. Controlled.</td>
-</tr>
-<tr>
-<td>R7</td>
-<td class="td-good">7:20 #239</td>
-<td class="td-target">6:30/km</td>
-<td class="td-muted">Best Bengaluru run. Repeat.</td>
-</tr>
-<tr>
-<td>R8</td>
-<td class="td-muted">8:16</td>
-<td class="td-bad">All out</td>
-<td class="td-muted">Empty the tank.</td>
-</tr>
+<tr><td>R1</td><td class="td-r">8:00 #495</td><td>7:00/km</td><td class="td-m">Hold back.</td></tr>
+<tr><td>R2&ndash;3</td><td class="td-m">7:39&ndash;7:40</td><td>6:45/km</td><td class="td-m">Settle in.</td></tr>
+<tr><td>R4&ndash;6</td><td class="td-m">7:39&ndash;7:54</td><td>6:40/km</td><td class="td-m">Race pace.</td></tr>
+<tr><td>R7</td><td class="td-g">7:20 #239</td><td>6:30/km</td><td class="td-m">Best run. Repeat.</td></tr>
+<tr><td>R8</td><td class="td-m">8:16</td><td class="td-r">All out</td><td class="td-m">Empty tank.</td></tr>
 </tbody>
 </table>
 </div>
-<div style="margin-top:8px;background:rgba(212,57,10,0.06);border:1px solid rgba(212,57,10,0.2);border-left:3px solid var(--accent);padding:10px 14px">
-<div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--accent);letter-spacing:0.06em">⚠ R1 DISCIPLINE — training issue</div>
-<div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-top:4px;line-height:1.6">W3 Sim R1 was 6:47/km vs 7:15 target — went out 28 sec/km too fast. Same pattern as Bengaluru. Being trained actively.</div>
+<div class="alert-card mt10" style="border-left-color:var(--red)">
+<div class="alert-t">R1 Discipline &mdash; Recurring Issue</div>
+<div class="alert-b">W3 Sim R1 was 6:47/km vs 7:15 target &mdash; 28 sec/km too fast. Same pattern as Bengaluru. Being trained actively.</div>
 </div>
 </div>
 
-<!-- WALL BALLS PROTOCOL -->
-
-<div class="section fade-in">
-<div class="section-head">
-<div class="section-title">Wall Balls Protocol</div>
-<div class="section-sub">8:34 → sub 6:00</div>
-</div>
-<div style="background:var(--warm);border:1px solid var(--border);padding:0 16px">
-<div class="protocol-list">
-<div class="protocol-step">
-<div class="step-num">1</div>
-<div class="step-text"><strong>Walk the last 20–30m</strong> into the station. HR begins dropping before you pick up the ball.</div>
-</div>
-<div class="protocol-step">
-<div class="step-num">2</div>
-<div class="step-text"><strong>5 deep breaths</strong> before touching the ball. Don't rush this.</div>
-</div>
-<div class="protocol-step">
-<div class="step-num">3</div>
-<div class="step-text">Start with <strong>planned sets: 15+10+10+10</strong>. Never go to failure — broken sets cost 30+ seconds.</div>
-</div>
-<div class="protocol-step">
-<div class="step-num">4</div>
-<div class="step-text">Rest = <strong>exactly 3 breaths</strong> between sets. Not "when ready." This separates 8:34 from 6:00.</div>
-</div>
-<div class="protocol-step">
-<div class="step-num">5</div>
-<div class="step-text"><strong>Ball stays at chest height</strong> during rest. Putting it down costs 2–3 seconds every time.</div>
-</div>
-</div>
+<div class="sec">
+<div class="sec-hd"><div class="sec-t">Wall Balls Protocol</div><div class="sec-s">8:34 &rarr; sub 6:00</div></div>
+<div class="proto">
+<div class="p-step"><div class="p-n">1</div><div class="p-t"><strong>Walk the last 20&ndash;30m</strong> into the station. HR starts dropping before you pick up the ball.</div></div>
+<div class="p-step"><div class="p-n">2</div><div class="p-t"><strong>5 deep breaths</strong> before touching the ball. Don&rsquo;t rush this.</div></div>
+<div class="p-step"><div class="p-n">3</div><div class="p-t">Start with <strong>planned sets: 15+10+10+10</strong>. Never go to failure &mdash; broken sets cost 30+ seconds.</div></div>
+<div class="p-step"><div class="p-n">4</div><div class="p-t">Rest = <strong>exactly 3 breaths</strong> between sets. Not &ldquo;when ready.&rdquo; This separates 8:34 from 6:00.</div></div>
+<div class="p-step"><div class="p-n">5</div><div class="p-t"><strong>Ball stays at chest height</strong> during rest. Putting it down costs 2&ndash;3 sec every time.</div></div>
 </div>
 </div>
 
 <div class="divider"></div>
-
-<!-- FOOTER -->
-
 <div class="footer">
-<div class="footer-name">Sumegha Khilnani</div>
-<div class="footer-note">Hyrox Delhi · July 26 2026 · Sub 1:50</div>
-<div class="footer-note" style="margin-top:2px">Updated after every session · Last: May 13 2026</div>
+<div class="f-name">Sumegha Khilnani</div>
+<div class="f-note">Hyrox Delhi &middot; July 26 2026 &middot; Goal: Sub 1:50<br>Updated after every session &middot; Last: May 13 2026</div>
 </div>
 
+</div>
 <script>
-function updateCountdown() {
-const race = new Date('2026-07-26T07:00:00+05:30');
-const now = new Date();
-const diff = race - now;
-if (diff <= 0) {
-document.getElementById('cd-days').textContent = '0';
-document.getElementById('cd-hrs').textContent = '00';
-document.getElementById('cd-min').textContent = '00';
-return;
+function tick() {
+var r = new Date('2026-07-26T07:00:00+05:30'), n = new Date(), t = Math.max(0, r - n);
+document.getElementById('d').textContent = Math.floor(t/864e5);
+document.getElementById('h').textContent = String(Math.floor(t%864e5/36e5)).padStart(2,'0');
+document.getElementById('m').textContent = String(Math.floor(t%36e5/6e4)).padStart(2,'0');
 }
-const days = Math.floor(diff / (1000*60*60*24));
-const hrs = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
-document.getElementById('cd-days').textContent = days;
-document.getElementById('cd-hrs').textContent = String(hrs).padStart(2,'0');
-document.getElementById('cd-min').textContent = String(mins).padStart(2,'0');
-}
-updateCountdown();
-setInterval(updateCountdown, 60000);
+tick(); setInterval(tick, 60000);
 </script>
-
 </body>
 </html>
