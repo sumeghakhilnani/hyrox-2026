@@ -1,11 +1,9 @@
 name: Update Hyrox Dashboard Data
 
 on:
-  # Run daily at 6:30am IST (1:00am UTC)
   schedule:
-    - cron: '0 1 * * *'
-
-  # Allow manual trigger from GitHub UI or the dashboard refresh button
+    - cron: '0 1 * * *'   # 6:30am IST
+    - cron: '0 4 * * *'   # 9:30am IST
   workflow_dispatch:
 
 permissions:
