@@ -1,0 +1,200 @@
+{
+  "lastUpdated": "2026-06-01",
+  "recovery": {
+    "hrv": {
+      "lastNight": 0,
+      "weeklyAvg": 71,
+      "baselineLow": 56,
+      "baselineHigh": 83,
+      "status": "BALANCED",
+      "sparkline": [
+        {
+          "d": "T",
+          "v": 0
+        },
+        {
+          "d": "W",
+          "v": 0
+        },
+        {
+          "d": "T",
+          "v": 0
+        },
+        {
+          "d": "F",
+          "v": 0
+        },
+        {
+          "d": "S",
+          "v": 0
+        },
+        {
+          "d": "S",
+          "v": 0
+        },
+        {
+          "d": "M",
+          "v": 0
+        }
+      ]
+    },
+    "readiness": {
+      "score": 86,
+      "level": "HIGH"
+    },
+    "rhr": 49,
+    "battery": 38,
+    "sleep": 85,
+    "stress": "BALANCED",
+    "vo2": {
+      "calendarDate": "2026-05-30",
+      "vo2MaxPreciseValue": 42.3,
+      "vo2MaxValue": 42.0,
+      "fitnessAge": null,
+      "fitnessAgeDescription": null,
+      "maxMetCategory": 0
+    }
+  },
+  "activities": [
+    {
+      "name": "Morning HIIT",
+      "date": "2026-06-01",
+      "distanceKm": 0.0,
+      "movingSec": 4302,
+      "paceMinKm": 0,
+      "avgHR": 106.7,
+      "maxHR": 170.0,
+      "type": "Workout"
+    },
+    {
+      "name": "Half sim",
+      "date": "2026-05-30",
+      "distanceKm": 4.74,
+      "movingSec": 3396,
+      "paceMinKm": 11.96,
+      "avgHR": 155.9,
+      "maxHR": 196.0,
+      "type": "Run"
+    },
+    {
+      "name": "Morning HIIT",
+      "date": "2026-05-30",
+      "distanceKm": 0.0,
+      "movingSec": 834,
+      "paceMinKm": 0,
+      "avgHR": 119.0,
+      "maxHR": 151.0,
+      "type": "Workout"
+    },
+    {
+      "name": "Morning HIIT",
+      "date": "2026-05-29",
+      "distanceKm": 0.0,
+      "movingSec": 3747,
+      "paceMinKm": 0,
+      "avgHR": 132.1,
+      "maxHR": 170.0,
+      "type": "Workout"
+    },
+    {
+      "name": "Zone 2 run",
+      "date": "2026-05-28",
+      "distanceKm": 13.0,
+      "movingSec": 7373,
+      "paceMinKm": 9.45,
+      "avgHR": 140.4,
+      "maxHR": 152.0,
+      "type": "Run"
+    },
+    {
+      "name": "Morning HIIT",
+      "date": "2026-05-27",
+      "distanceKm": 0.0,
+      "movingSec": 5101,
+      "paceMinKm": 0,
+      "avgHR": 108.5,
+      "maxHR": 182.0,
+      "type": "Workout"
+    },
+    {
+      "name": "Morning Run",
+      "date": "2026-05-26",
+      "distanceKm": 6.02,
+      "movingSec": 2509,
+      "paceMinKm": 6.94,
+      "avgHR": 160.4,
+      "maxHR": 176.0,
+      "type": "Run"
+    },
+    {
+      "name": "Morning HIIT",
+      "date": "2026-05-25",
+      "distanceKm": 0.0,
+      "movingSec": 5153,
+      "paceMinKm": 0,
+      "avgHR": 120.3,
+      "maxHR": 180.0,
+      "type": "Workout"
+    },
+    {
+      "name": "Half Hyrox Sim",
+      "date": "2026-05-23",
+      "distanceKm": 4.71,
+      "movingSec": 3588,
+      "paceMinKm": 12.69,
+      "avgHR": 165.9,
+      "maxHR": 197.0,
+      "type": "Run"
+    },
+    {
+      "name": "Morning HIIT",
+      "date": "2026-05-22",
+      "distanceKm": 0.0,
+      "movingSec": 5226,
+      "paceMinKm": 0,
+      "avgHR": 107.8,
+      "maxHR": 163.0,
+      "type": "Workout"
+    },
+    {
+      "name": "9k zone 2 + 3k @7",
+      "date": "2026-05-21",
+      "distanceKm": 12.01,
+      "movingSec": 6356,
+      "paceMinKm": 8.82,
+      "avgHR": 145.9,
+      "maxHR": 174.0,
+      "type": "Run"
+    },
+    {
+      "name": "Morning HIIT",
+      "date": "2026-05-20",
+      "distanceKm": 0.0,
+      "movingSec": 5608,
+      "paceMinKm": 0,
+      "avgHR": 109.6,
+      "maxHR": 189.0,
+      "type": "Workout"
+    },
+    {
+      "name": "Morning Run",
+      "date": "2026-05-19",
+      "distanceKm": 6.0,
+      "movingSec": 2482,
+      "paceMinKm": 6.89,
+      "avgHR": 166.8,
+      "maxHR": 181.0,
+      "type": "Run"
+    },
+    {
+      "name": "Morning HIIT",
+      "date": "2026-05-18",
+      "distanceKm": 0.0,
+      "movingSec": 5472,
+      "paceMinKm": 0,
+      "avgHR": 109.2,
+      "maxHR": 160.0,
+      "type": "Workout"
+    }
+  ]
+}
