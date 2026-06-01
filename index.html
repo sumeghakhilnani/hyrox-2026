@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hyrox Dashboard — Delhi 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ── RESET + BASE ─────────────────────────────────────────────────────────── */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#080808; --surface:#111; --border:#222;
+  --accent:#E8461A; --accent-dim:#6B1F08;
+  --amber:#F0A500; --green:#22C55E;
+  --white:#F0F0F0; --muted:#666; --muted2:#444;
+}
+body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;min-height:100vh}
+.app{max-width:680px;margin:0 auto;padding-bottom:40px}
+
+/* ── HEADER ───────────────────────────────────────────────────────────────── */
+.hdr{padding:24px 20px 18px;border-bottom:1px solid var(--border)}
+.hdr-top{display:flex;align-items:flex-end;gap:14px;margin-bottom:14px}
+.big-num{font-family:'Bebas Neue',sans-serif;font-size:80px;line-height:1;color:var(--accent);letter-spacing:-2px}
+.big-sub{padding-bottom:8px}
+.big-label{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;line-height:1.2}
+.big-city{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:4px;color:var(--muted)}
+.badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:13px}
+.bdg{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:4px 9px;border-radius:3px}
+.bdg-ph{background:#1a0a05;color:var(--accent);border:1px solid var(--accent-dim)}
+.bdg-g{background:#141414;color:var(--white);border:1px solid #333}
+.bdg-s{background:#141414;color:var(--amber);border:1px solid #3a2e00}
+.bdg-p{background:#141414;color:var(--muted);border:1px solid #2a2a2a}
+.prog-bar{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--amber));border-radius:2px}
+.prog-lbls{display:flex;justify-content:space-between;margin-top:5px;font-size:10px;color:var(--muted);font-family:'Barlow Condensed',sans-serif}
+
+/* ── TABS ─────────────────────────────────────────────────────────────────── */
+.tabs{display:flex;padding:0 20px;border-bottom:1px solid var(--border);background:var(--bg);position:sticky;top:0;z-index:10}
+.tab{flex:1;background:none;border:none;padding:13px 0;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;color:var(--muted2);cursor:pointer;position:relative;transition:color .2s}
+.tab.on{color:var(--white)}
+.tab.on::after{content:'';position:absolute;bottom:-1px;left:20%;right:20%;height:2px;background:var(--accent);border-radius:1px}
+.panel{padding:20px;display:none}
+.panel.on{display:block}
+
+/* ── CARDS ────────────────────────────────────────────────────────────────── */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px;margin-bottom:10px}
+.card-lbl{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--muted);margin-bottom:8px}
+.card-big{font-family:'Bebas Neue',sans-serif;font-size:42px;line-height:1;letter-spacing:-1px}
+.card-unit{font-family:'Barlow Condensed',sans-serif;font-size:13px;color:var(--muted);margin-left:3px}
+.card-sub{font-size:11px;color:var(--muted);margin-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pill{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:3px 9px;border-radius:3px;display:inline-block}
+.pill-g{background:#0a2416;color:var(--green);border:1px solid #0f3a22}
+.pill-o{background:#1a0a05;color:var(--accent);border:1px solid var(--accent-dim)}
+.pill-a{background:#1a1200;color:var(--amber);border:1px solid #3a2e00}
+
+/* ── HRV SPARKLINE (SVG) ──────────────────────────────────────────────────── */
+.hrv-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.hrv-big{font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--accent);line-height:1;letter-spacing:-1px}
+.hrv-unit{font-family:'Barlow Condensed',sans-serif;font-size:16px;color:var(--muted);margin-left:4px}
+.hrv-sub{font-size:11px;color:var(--muted);margin-top:4px}
+#hrv-svg{width:100%;height:64px;margin-top:8px}
+
+/* ── NOTE CARD ────────────────────────────────────────────────────────────── */
+.note-card{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;padding:14px 16px;display:flex;gap:12px;margin-bottom:16px}
+.note-ico{font-size:20px;flex-shrink:0;padding-top:2px}
+.note-ttl{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--accent);margin-bottom:6px}
+.note-txt{font-size:13px;color:#aaa;line-height:1.6}
+
+/* ── INSIGHTS ─────────────────────────────────────────────────────────────── */
+.ins-col{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px}
+.ins-hdr{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.ins-row{font-size:12px;color:#999;line-height:1.5;padding:6px 0;border-bottom:1px solid #1a1a1a}
+.ins-row:last-child{border-bottom:none}
+
+/* ── WEEK TAB ─────────────────────────────────────────────────────────────── */
+.phase-ban{background:#0d0500;border:1px solid var(--accent-dim);border-radius:8px;padding:14px 16px;display:flex;gap:12px;margin-bottom:20px}
+.sec-lbl{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;color:var(--muted);margin-bottom:10px}
+.mt16{margin-top:16px}
+.sess{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.sess-nm{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;letter-spacing:.5px}
+.sess-nt{font-size:12px;color:var(--muted);margin-top:3px}
+.sess-r{text-align:right}
+.sess-pc{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.5px}
+.sess-hr{font-size:11px;color:var(--muted)}
+.sess-type{font-size:10px;color:var(--muted);font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;margin-bottom:3px}
+.vol-bar-o{height:4px;background:var(--border);border-radius:2px;overflow:hidden}
+.vol-bar-i{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--amber))}
+
+/* ── PROGRESS TAB ─────────────────────────────────────────────────────────── */
+.sp-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:12px}
+.sp-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.sp-nm{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;color:var(--muted)}
+.sp-pct{font-family:'Bebas Neue',sans-serif;font-size:22px}
+.sp-meta{display:flex;gap:20px;margin-bottom:14px}
+.sp-sl{font-size:10px;color:var(--muted);letter-spacing:.5px;margin-bottom:3px}
+.sp-sv{font-family:'Bebas Neue',sans-serif;font-size:24px;line-height:1}
+.trk{height:6px;background:var(--border);border-radius:3px;overflow:hidden;margin-bottom:5px}
+.trk-fill{height:100%;border-radius:3px;transition:width .8s ease}
+.trk-lbls{display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}
+.tl{display:flex;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);align-items:flex-end}
+.tl-pt{flex:1;text-align:center}
+.tl-bw{height:48px;display:flex;align-items:flex-end;justify-content:center}
+.tl-b{width:100%;max-width:32px;border-radius:3px 3px 0 0}
+.tl-t{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;margin-top:4px}
+.tl-l{font-size:10px;color:var(--muted);margin-top:2px}
+.rb-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:12px}
+.rb-row{margin-bottom:12px}
+.rb-hdr{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px}
+.rb-lbl{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700}
+.rb-bo{height:4px;background:var(--border);border-radius:2px;overflow:hidden}
+.rb-bi{height:100%;border-radius:2px}
+
+/* ── REFRESH FOOTER ───────────────────────────────────────────────────────── */
+.ref-ft{padding:20px 20px 10px;border-top:1px solid var(--border);text-align:center;margin-top:8px}
+.ref-btn{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;color:var(--white);background:var(--surface);border:1px solid #333;border-radius:6px;padding:11px 24px;cursor:pointer;width:100%;transition:all .15s}
+.ref-btn:hover{border-color:var(--accent);color:var(--accent)}
+.ref-btn:disabled{opacity:.5;cursor:not-allowed}
+.lu{font-size:11px;color:var(--muted);margin-top:8px;font-family:'Barlow Condensed',sans-serif;letter-spacing:.5px}
+#refresh-status{font-size:12px;color:var(--amber);margin-top:8px;min-height:18px;font-family:'Barlow Condensed',sans-serif;letter-spacing:.5px}
+
+/* ── VO2 CHART (SVG) ──────────────────────────────────────────────────────── */
+#vo2-svg{width:100%;height:80px;margin-top:8px}
+
+@media(max-width:480px){
+  .big-num{font-size:64px}
+  .grid3{grid-template-columns:repeat(3,1fr)}
+  .sp-meta{gap:12px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- ── HEADER ────────────────────────────────────────────────────────── -->
+  <header class="hdr">
+    <div class="hdr-top">
+      <span class="big-num" id="days-count">55</span>
+      <div class="big-sub">
+        <div class="big-label">DAYS TO</div>
+        <div class="big-city">DELHI · HYROX</div>
+      </div>
+    </div>
+    <div class="badges">
+      <span class="bdg bdg-ph" id="week-badge">WK 7 · DELOAD</span>
+      <span class="bdg bdg-g">GOAL: SUB 1:50</span>
+      <span class="bdg bdg-s">STRETCH: 1:45</span>
+      <span class="bdg bdg-p">PB: 2:03:41</span>
+    </div>
+    <div class="prog-bar"><div class="prog-fill" id="prog-fill" style="width:43%"></div></div>
+    <div class="prog-lbls"><span>WK 1 · APR 19</span><span id="prog-lbl">WEEK 6 OF 14</span><span>RACE · JUL 26</span></div>
+  </header>
+
+  <!-- ── TABS ──────────────────────────────────────────────────────────── -->
+  <nav class="tabs">
+    <button class="tab on" onclick="switchTab('today',this)">TODAY</button>
+    <button class="tab"    onclick="switchTab('week',this)">THIS WEEK</button>
+    <button class="tab"    onclick="switchTab('progress',this)">PROGRESS</button>
+  </nav>
+
+  <!-- ─────────────────────────── TODAY ─────────────────────────────────── -->
+  <div id="tab-today" class="panel on">
+
+    <!-- HRV Card -->
+    <div class="card">
+      <div class="hrv-top">
+        <div>
+          <div class="card-lbl">HRV — LAST NIGHT</div>
+          <div><span class="hrv-big" id="hrv-val">—</span><span class="hrv-unit">ms</span></div>
+          <div class="hrv-sub" id="hrv-sub">—</div>
+        </div>
+        <div style="text-align:right">
+          <span class="pill pill-g" id="hrv-status">—</span>
+          <div class="hrv-sub" style="margin-top:6px" id="hrv-note">—</div>
+        </div>
+      </div>
+      <svg id="hrv-svg" viewBox="0 0 300 60" preserveAspectRatio="none"></svg>
+    </div>
+
+    <!-- Recovery Grid -->
+    <div class="grid3">
+      <div class="card">
+        <div class="card-lbl">READINESS</div>
+        <div class="card-big" style="color:var(--accent)" id="readiness-val">—<span class="card-unit">/100</span></div>
+        <div class="card-sub" id="readiness-level">—</div>
+      </div>
+      <div class="card">
+        <div class="card-lbl">RESTING HR</div>
+        <div class="card-big" id="rhr-val">—<span class="card-unit">bpm</span></div>
+        <div class="card-sub">last night</div>
+      </div>
+      <div class="card">
+        <div class="card-lbl">SLEEP SCORE</div>
+        <div class="card-big" id="sleep-val">—<span class="card-unit">/100</span></div>
+        <div class="card-sub">last night</div>
+      </div>
+    </div>
+
+    <!-- Body Battery + Stress -->
+    <div class="card" style="display:flex;align-items:center;justify-content:space-between">
+      <div>
+        <div class="card-lbl">BODY BATTERY</div>
+        <div class="card-big" id="battery-val">—<span class="card-unit">/100</span></div>
+      </div>
+      <div style="text-align:right">
+        <div class="card-lbl">STRESS</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;color:var(--green)" id="stress-val">—</div>
+      </div>
+    </div>
+
+    <!-- Coaching note -->
+    <div class="note-card">
+      <span class="note-ico">💡</span>
+      <div>
+        <div class="note-ttl" id="note-title">LOADING...</div>
+        <div class="note-txt" id="note-body">Fetching today's data...</div>
+      </div>
+    </div>
+
+    <!-- Insights -->
+    <div class="grid2">
+      <div class="ins-col">
+        <div class="ins-hdr" style="color:var(--green)">✅ WORKING WELL</div>
+        <div id="working-list">
+          <div class="ins-row">🎯 Wall Balls 6:11 — 11s off sub-6:00 target, down from 8:34 PB</div>
+          <div class="ins-row">↗ Run fade eliminated — R1–R4 held 7:00–7:12</div>
+          <div class="ins-row">✓ Z2: best-ever — 13km at avg HR 140</div>
+        </div>
+      </div>
+      <div class="ins-col">
+        <div class="ins-hdr" style="color:var(--amber)">⚠ NEEDS ATTENTION</div>
+        <div id="attention-list">
+          <div class="ins-row">📏 BBJ: only at 60m — 80m needed in Wk 8</div>
+          <div class="ins-row">🧠 Deload trap: readiness high — hold 40% cut</div>
+          <div class="ins-row">⏱ R1 pace: 7:12 vs 7:00 target</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────── THIS WEEK ──────────────────────────────── -->
+  <div id="tab-week" class="panel">
+    <div class="phase-ban">
+      <span style="font-size:18px;flex-shrink:0;padding-top:2px">🔄</span>
+      <div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--accent);margin-bottom:4px" id="phase-title">WEEK 7 · DELOAD</div>
+        <div style="font-size:12px;color:#888;line-height:1.5">Recent activity from Strava. Data updates daily at 6:30am or when you hit Refresh.</div>
+      </div>
+    </div>
+
+    <div class="sec-lbl">RECENT ACTIVITIES</div>
+    <div id="activities-list">
+      <div class="card" style="color:var(--muted);font-size:13px">Loading activities...</div>
+    </div>
+
+    <div class="sec-lbl mt16">WEEKLY VOLUME</div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
+        <div><span style="font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:-1px" id="vol-val">—</span><span style="font-family:'Barlow Condensed',sans-serif;font-size:13px;color:var(--muted);margin-left:4px">km this week</span></div>
+        <div style="font-size:12px;color:var(--muted)" id="vol-acts">—</div>
+      </div>
+      <div class="vol-bar-o"><div class="vol-bar-i" id="vol-bar" style="width:0%"></div></div>
+      <div style="font-size:11px;color:var(--muted);margin-top:6px" id="vol-sub">—</div>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────── PROGRESS ───────────────────────────────── -->
+  <div id="tab-progress" class="panel">
+
+    <!-- BBJ -->
+    <div class="sp-card">
+      <div class="sp-hdr"><div class="sp-nm">BURPEE BROAD JUMP</div><div class="sp-pct" style="color:var(--accent)">30% to target</div></div>
+      <div class="sp-meta">
+        <div><div class="sp-sl">BENGALURU</div><div class="sp-sv" style="color:#aaa">12:50</div><div style="font-size:11px;color:var(--muted)">race PB</div></div>
+        <div><div class="sp-sl">BEST TRAINING</div><div class="sp-sv" style="color:var(--accent)">5:58</div><div style="font-size:11px;color:var(--muted)">60m sim · Wk 6</div></div>
+        <div><div class="sp-sl">TARGET</div><div class="sp-sv" style="color:var(--green)">8:00</div><div style="font-size:11px;color:var(--muted)">race goal</div></div>
+      </div>
+      <div class="trk"><div class="trk-fill" style="width:30%;background:linear-gradient(90deg,#E8461A88,#E8461A)"></div></div>
+      <div class="trk-lbls"><span>Start: 12:50</span><span style="color:var(--accent)">Target: 8:00</span></div>
+      <div class="tl">
+        <div class="tl-pt"><div class="tl-bw"><div class="tl-b" style="height:8px;background:#2a2a2a"></div></div><div class="tl-t" style="color:#888">12:50</div><div class="tl-l">BLR Race</div></div>
+        <div class="tl-pt"><div class="tl-bw"><div class="tl-b" style="height:22px;background:#2a2a2a"></div></div><div class="tl-t" style="color:#888">6:09</div><div class="tl-l">Wk 3</div></div>
+        <div class="tl-pt"><div class="tl-bw"><div class="tl-b" style="height:24px;background:var(--accent)"></div></div><div class="tl-t" style="color:var(--accent)">5:58</div><div class="tl-l">Wk 6</div></div>
+        <div class="tl-pt"><div class="tl-bw"><div class="tl-b" style="height:48px;background:transparent;border:1.5px dashed #E8461A44;border-bottom:none"></div></div><div class="tl-t" style="color:var(--accent)">8:00</div><div class="tl-l" style="color:var(--accent)">TARGET</div></div>
+      </div>
+      <div style="font-size:11px;color:var(--muted);margin-top:10px">Trained at 60m — first 80m attempt needed in Wk 8. Race is 80m.</div>
+    </div>
+
+    <!-- Wall Balls -->
+    <div class="sp-card">
+      <div class="sp-hdr"><div class="sp-nm">WALL BALLS 100r</div><div class="sp-pct" style="color:var(--amber)">93% to target</div></div>
+      <div class="sp-meta">
+        <div><div class="sp-sl">BENGALURU</div><div class="sp-sv" style="color:#aaa">8:34</div><div style="font-size:11px;color:var(--muted)">race PB</div></div>
+        <div><div class="sp-sl">BEST TRAINING</div><div class="sp-sv" style="color:var(--amber)">6:11</div><div style="font-size:11px;color:var(--muted)">100r · Wk 6 🔥</div></div>
+        <div><div class="sp-sl">TARGET</div><div class="sp-sv" style="color:var(--green)">6:00</div><div style="font-size:11px;color:var(--muted)">race goal</div></div>
+      </div>
+      <div class="trk"><div class="trk-fill" style="width:93%;background:linear-gradient(90deg,#F0A50088,#F0A500)"></div></div>
+      <div class="trk-lbls"><span>Start: 8:34</span><span style="color:var(--amber)">Target: 6:00</span></div>
+      <div class="tl">
+        <div class="tl-pt"><div class="tl-bw"><div class="tl-b" style="height:8px;background:#2a2a2a"></div></div><div class="tl-t" style="color:#888">8:34</div><div class="tl-l">BLR Race</div></div>
+        <div class="tl-pt"><div class="tl-bw"><div class="tl-b" style="height:30px;background:#2a2a2a"></div></div><div class="tl-t" style="color:#888">7:30</div><div class="tl-l">Wk 5</div></div>
+        <div class="tl-pt"><div class="tl-bw"><div class="tl-b" style="height:44px;background:var(--amber)"></div></div><div class="tl-t" style="color:var(--amber)">6:11</div><div class="tl-l">Wk 6</div></div>
+        <div class="tl-pt"><div class="tl-bw"><div class="tl-b" style="height:48px;background:transparent;border:1.5px dashed #F0A50044;border-bottom:none"></div></div><div class="tl-t" style="color:var(--amber)">6:00</div><div class="tl-l" style="color:var(--amber)">TARGET</div></div>
+      </div>
+      <div style="font-size:11px;color:var(--muted);margin-top:10px">6:11 this week — 11s off target. Breathing protocol locked in. 93% of gap closed.</div>
+    </div>
+
+    <!-- Aerobic -->
+    <div class="card" style="margin-bottom:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;color:var(--muted)">AEROBIC HEALTH</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--green)" id="vo2-val">VO₂ — ↗</div>
+      </div>
+      <div style="display:flex;gap:20px;margin-bottom:8px">
+        <div><div style="font-size:10px;color:var(--muted)">VO2 START</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--muted)">41</div></div>
+        <div><div style="font-size:10px;color:var(--muted)">VO2 NOW</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--green)" id="vo2-now">42</div></div>
+        <div><div style="font-size:10px;color:var(--muted)">RESTING HR</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700" id="aero-rhr">—</div></div>
+        <div><div style="font-size:10px;color:var(--muted)">HRV 7-DAY</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700" id="aero-hrv">—</div></div>
+      </div>
+      <div style="font-size:11px;color:var(--muted);line-height:1.5;font-style:italic">Same 6:57/km tempo now running at 4–6 bpm lower HR than Jun 2025 — aerobic adaptation confirmed.</div>
+    </div>
+
+    <!-- Race breakdown -->
+    <div class="rb-card">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;color:var(--muted);margin-bottom:16px">RACE TIME BREAKDOWN — PATH TO SUB 1:50</div>
+      <div class="rb-row">
+        <div class="rb-hdr"><span class="rb-lbl">BBJ (80m)</span><div style="font-size:12px"><span style="font-weight:600;color:var(--accent)">TBD</span><span style="color:var(--muted);margin-left:4px">/ ~4:50</span></div></div>
+        <div class="rb-bo"><div class="rb-bi" style="width:30%;background:var(--accent)"></div></div>
+        <div style="font-size:10px;color:var(--muted);margin-top:3px">First 80m sim needed in Wk 8</div>
+      </div>
+      <div class="rb-row">
+        <div class="rb-hdr"><span class="rb-lbl">Wall Balls</span><div style="font-size:12px"><span style="font-weight:600;color:var(--green)">~2:23</span><span style="color:var(--muted);margin-left:4px">/ ~2:34</span></div></div>
+        <div class="rb-bo"><div class="rb-bi" style="width:93%;background:var(--amber)"></div></div>
+        <div style="font-size:10px;color:var(--muted);margin-top:3px">93% of target gap closed 🔥</div>
+      </div>
+      <div class="rb-row">
+        <div class="rb-hdr"><span class="rb-lbl">Run pacing</span><div style="font-size:12px"><span style="font-weight:600;color:#4A9EE0">in progress</span><span style="color:var(--muted);margin-left:4px">/ ~5:52</span></div></div>
+        <div class="rb-bo"><div class="rb-bi" style="width:20%;background:#4A9EE0"></div></div>
+        <div style="font-size:10px;color:var(--muted);margin-top:3px">Phase 3 full sims will reveal real gains</div>
+      </div>
+      <div class="rb-row">
+        <div class="rb-hdr"><span class="rb-lbl">Transitions</span><div style="font-size:12px"><span style="font-weight:600;color:var(--muted)">in progress</span><span style="color:var(--muted);margin-left:4px">/ ~1:30</span></div></div>
+        <div class="rb-bo"><div class="rb-bi" style="width:15%;background:var(--muted)"></div></div>
+        <div style="font-size:10px;color:var(--muted);margin-top:3px">Starts in Phase 3 practice sims</div>
+      </div>
+      <div style="font-size:11px;color:var(--muted);margin-top:10px;line-height:1.5">Sub 1:50 requires ~13:41 total saving. Wall Balls near-locked. BBJ to be confirmed at 80m in Phase 3.</div>
+    </div>
+  </div>
+
+  <!-- ── REFRESH FOOTER ───────────────────────────────────────────────────── -->
+  <div class="ref-ft">
+    <button class="ref-btn" id="refresh-btn" onclick="triggerRefresh()">↻ &nbsp; REFRESH WITH LATEST DATA</button>
+    <div id="refresh-status"></div>
+    <div class="lu" id="last-updated">LAST UPDATED: —</div>
+  </div>
+
+</div><!-- end .app -->
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+// CONFIG — fill in your values
+// ─────────────────────────────────────────────────────────────────────────────
+const GITHUB = {
+  owner:    "sumeghakhilnani",   // ← change this
+  repo:     "hyrox-2026",         // ← change this
+  workflow: "update-data.yml",
+  token:    "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",            // ← change this (fine-grained, Actions:write only)
+};
+
+const RACE_DATE  = new Date("2026-07-26");
+const PLAN_START = new Date("2026-04-19");
+const TOTAL_WEEKS = 14;
+
+// ─────────────────────────────────────────────────────────────────────────────
+// UTILS
+// ─────────────────────────────────────────────────────────────────────────────
+const $ = id => document.getElementById(id);
+const fmt = s => `${Math.floor(s/60)}:${(s%60).toString().padStart(2,"0")}`;
+
+function daysToRace() {
+  const now = new Date(); now.setHours(0,0,0,0);
+  return Math.ceil((RACE_DATE - now) / 86400000);
+}
+
+function currentWeek() {
+  const now = new Date(); now.setHours(0,0,0,0);
+  return Math.min(TOTAL_WEEKS, Math.ceil((now - PLAN_START) / (7*86400000)));
+}
+
+function paceStr(minKm) {
+  if (!minKm) return "—";
+  const m = Math.floor(minKm);
+  const s = Math.round((minKm - m) * 60);
+  return `${m}:${s.toString().padStart(2,"0")}/km`;
+}
+
+function movingStr(secs) {
+  const m = Math.floor(secs/60);
+  return m < 60 ? `${m}min` : `${Math.floor(m/60)}h${(m%60).toString().padStart(2,"0")}`;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RENDER HEADER
+// ─────────────────────────────────────────────────────────────────────────────
+function renderHeader() {
+  $("days-count").textContent = daysToRace();
+  const wk = currentWeek();
+  $("prog-fill").style.width = `${(wk/TOTAL_WEEKS)*100}%`;
+  $("prog-lbl").textContent = `WEEK ${wk} OF ${TOTAL_WEEKS}`;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// HRV SPARKLINE (inline SVG)
+// ─────────────────────────────────────────────────────────────────────────────
+function renderSparkline(sparkline) {
+  if (!sparkline || !sparkline.length) return;
+  const vals   = sparkline.map(d => d.v);
+  const min    = Math.min(...vals) - 5;
+  const max    = Math.max(...vals) + 5;
+  const W = 300, H = 50;
+  const pad = 16;
+  const xStep = (W - pad*2) / (vals.length - 1);
+
+  const pts = vals.map((v, i) => {
+    const x = pad + i * xStep;
+    const y = H - ((v - min) / (max - min)) * H;
+    return `${x},${y}`;
+  });
+
+  const polyline = pts.join(" ");
+  const areaPath = `M${pts[0]} L${pts.join(" L")} L${pad + (vals.length-1)*xStep},${H+10} L${pad},${H+10} Z`;
+
+  const labels = sparkline.map((d, i) => {
+    const x = pad + i * xStep;
+    return `<text x="${x}" y="${H+14}" text-anchor="middle" fill="#666" font-size="9" font-family="Barlow Condensed">${d.d}</text>`;
+  }).join("");
+
+  $("hrv-svg").innerHTML = `
+    <defs>
+      <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#E8461A" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="#E8461A" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path d="${areaPath}" fill="url(#sg)"/>
+    <polyline points="${polyline}" fill="none" stroke="#E8461A" stroke-width="1.5" stroke-linejoin="round"/>
+    ${vals.map((v,i) => `<circle cx="${pad+i*xStep}" cy="${H-((v-min)/(max-min))*H}" r="2.5" fill="#E8461A"/>`).join("")}
+    ${labels}
+  `;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RENDER TODAY TAB
+// ─────────────────────────────────────────────────────────────────────────────
+function renderToday(d) {
+  const rec = d.recovery || {};
+  const hrv = rec.hrv    || {};
+
+  // HRV
+  $("hrv-val").textContent   = hrv.lastNight || "—";
+  $("hrv-sub").textContent   = `Weekly avg ${hrv.weeklyAvg||"—"}ms · Baseline ${hrv.baselineLow||56}–${hrv.baselineHigh||82}ms`;
+  $("hrv-status").textContent = hrv.status || "—";
+  $("hrv-note").innerHTML    = hrv.lastNight >= (hrv.baselineLow||56) ? "Above baseline<br>7-day avg healthy" : "Below baseline<br>Consider light session";
+  renderSparkline(hrv.sparkline);
+
+  // Recovery cards
+  const readiness = rec.readiness || {};
+  $("readiness-val").innerHTML = `${readiness.score||"—"}<span class="card-unit">/100</span>`;
+  $("readiness-level").textContent = readiness.level || "—";
+  $("rhr-val").innerHTML   = `${rec.rhr||"—"}<span class="card-unit">bpm</span>`;
+  $("sleep-val").innerHTML = `${rec.sleep||"—"}<span class="card-unit">/100</span>`;
+  $("battery-val").innerHTML = `${rec.battery||"—"}<span class="card-unit">/100</span>`;
+  $("stress-val").textContent = rec.stress || "—";
+
+  // Aerobic cross-refs
+  $("aero-rhr").textContent = rec.rhr ? `${rec.rhr}bpm` : "—";
+  $("aero-hrv").textContent = hrv.weeklyAvg ? `${hrv.weeklyAvg}ms` : "—";
+
+  // VO2
+  if (rec.vo2) {
+    $("vo2-val").textContent = `VO₂ ${rec.vo2} ↗`;
+    $("vo2-now").textContent = rec.vo2;
+  }
+
+  // Coaching note — generated from data
+  generateNote(rec);
+}
+
+function generateNote(rec) {
+  const hrv    = rec.hrv        || {};
+  const ready  = (rec.readiness || {}).score || 0;
+  const status = hrv.status     || "";
+
+  let title = "TODAY'S READINESS";
+  let body  = "";
+
+  if (ready >= 85) {
+    title = "HIGH READINESS — TRAIN WITH INTENT";
+    body  = `Readiness ${ready}/100. HRV ${hrv.lastNight}ms — ${status.toLowerCase()}. Body is primed. Execute today's session with full focus. Don't add extra volume just because you feel good.`;
+  } else if (ready >= 65) {
+    title = "MODERATE READINESS — STANDARD SESSION";
+    body  = `Readiness ${ready}/100. HRV ${hrv.lastNight||"—"}ms. Solid day for a normal training session. Stick to the plan, don't push beyond prescribed intensity.`;
+  } else {
+    title = "LOW READINESS — BACK OFF TODAY";
+    body  = `Readiness ${ready}/100. HRV ${hrv.lastNight||"—"}ms — signals fatigue. Consider swapping to easy Z2 or full rest. Race fitness is built in recovery, not in grinding tired.`;
+  }
+
+  $("note-title").textContent = title;
+  $("note-body").textContent  = body;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RENDER THIS WEEK TAB
+// ─────────────────────────────────────────────────────────────────────────────
+function renderWeek(d) {
+  const acts = (d.activities || []).filter(a => ["Run","Workout","VirtualRun"].includes(a.type));
+
+  // This week's activities (last 7 days)
+  const now     = new Date(); now.setHours(0,0,0,0);
+  const weekAgo = new Date(now - 6*86400000);
+  const thisWeek = acts.filter(a => new Date(a.date) >= weekAgo);
+
+  // Weekly volume
+  const weekKm = thisWeek.reduce((s,a) => s + (a.distanceKm||0), 0);
+  $("vol-val").textContent  = weekKm.toFixed(1);
+  $("vol-acts").textContent = `${thisWeek.length} sessions`;
+  const TARGET_KM = 25;
+  $("vol-bar").style.width  = `${Math.min(100,(weekKm/TARGET_KM)*100)}%`;
+  $("vol-sub").textContent  = `${Math.round((weekKm/TARGET_KM)*100)}% of ~${TARGET_KM}km target`;
+
+  // Activity cards (last 7)
+  const recent = acts.slice(0,7);
+  if (!recent.length) {
+    $("activities-list").innerHTML = `<div class="card" style="color:var(--muted);font-size:13px">No recent activities found.</div>`;
+    return;
+  }
+
+  $("activities-list").innerHTML = recent.map(a => `
+    <div class="sess">
+      <div>
+        <div class="sess-type">${a.date}</div>
+        <div class="sess-nm">${a.name}</div>
+        <div class="sess-nt">${a.distanceKm}km · ${movingStr(a.movingSec)}</div>
+      </div>
+      <div class="sess-r">
+        <div class="sess-pc">${paceStr(a.paceMinKm)}</div>
+        ${a.avgHR ? `<div class="sess-hr">HR ${Math.round(a.avgHR)}${a.maxHR ? " / "+Math.round(a.maxHR) : ""}</div>` : ""}
+      </div>
+    </div>
+  `).join("");
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// LOAD DATA
+// ─────────────────────────────────────────────────────────────────────────────
+async function loadData() {
+  try {
+    const r = await fetch(`data.json?t=${Date.now()}`);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const d = await r.json();
+
+    renderToday(d);
+    renderWeek(d);
+
+    $("last-updated").textContent = `LAST UPDATED: ${d.lastUpdated || "—"} · GARMIN + STRAVA`;
+  } catch(e) {
+    console.error("Failed to load data.json:", e);
+    $("note-title").textContent = "DATA UNAVAILABLE";
+    $("note-body").textContent  = "Could not load data.json. Try refreshing — the Action may not have run yet.";
+    $("last-updated").textContent = "LAST UPDATED: —";
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// REFRESH — triggers GitHub Action, polls for completion
+// ─────────────────────────────────────────────────────────────────────────────
+async function triggerRefresh() {
+  const btn    = $("refresh-btn");
+  const status = $("refresh-status");
+
+  btn.disabled = true;
+  status.textContent = "⏳ Triggering update...";
+
+  const dispatchUrl = `https://api.github.com/repos/${GITHUB.owner}/${GITHUB.repo}/actions/workflows/${GITHUB.workflow}/dispatches`;
+  const headers     = { "Authorization": `token ${GITHUB.token}`, "Accept": "application/vnd.github.v3+json", "Content-Type": "application/json" };
+
+  try {
+    const r = await fetch(dispatchUrl, { method:"POST", headers, body: JSON.stringify({ref:"main"}) });
+    if (r.status !== 204) throw new Error(`Dispatch failed: ${r.status}`);
+
+    status.textContent = "✓ Action triggered — waiting for completion (~2 min)...";
+
+    // Poll every 15s for up to 3 minutes
+    const runsUrl = `https://api.github.com/repos/${GITHUB.owner}/${GITHUB.repo}/actions/runs?workflow_id=${GITHUB.workflow}&per_page=1`;
+    let attempts  = 0;
+
+    const poll = setInterval(async () => {
+      attempts++;
+      if (attempts > 12) { // 3 min timeout
+        clearInterval(poll);
+        status.textContent = "⚠ Timed out — refresh page in a minute.";
+        btn.disabled = false;
+        return;
+      }
+
+      const res  = await fetch(runsUrl, { headers });
+      const data = await res.json();
+      const run  = (data.workflow_runs || [])[0];
+
+      if (run?.status === "completed") {
+        clearInterval(poll);
+        if (run.conclusion === "success") {
+          status.textContent = "✓ Updated! Reloading...";
+          setTimeout(() => window.location.reload(), 1200);
+        } else {
+          status.textContent = `⚠ Action finished with: ${run.conclusion}. Check GitHub Actions tab.`;
+          btn.disabled = false;
+        }
+      } else {
+        const elapsed = attempts * 15;
+        status.textContent = `⏳ Running... (${elapsed}s)`;
+      }
+    }, 15000);
+
+  } catch(e) {
+    status.textContent = `⚠ Error: ${e.message}`;
+    btn.disabled = false;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TAB SWITCHING
+// ─────────────────────────────────────────────────────────────────────────────
+function switchTab(id, btn) {
+  document.querySelectorAll(".panel").forEach(p => p.classList.remove("on"));
+  document.querySelectorAll(".tab").forEach(b => b.classList.remove("on"));
+  $(`tab-${id}`).classList.add("on");
+  btn.classList.add("on");
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────────────────────────────────────
+renderHeader();
+loadData();
+</script>
+</body>
+</html>
