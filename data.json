@@ -39,16 +39,16 @@
       ]
     },
     "readiness": {
-      "score": 81,
-      "level": "HIGH"
+      "score": 73,
+      "level": "MODERATE"
     },
     "rhr": 54,
-    "battery": 75,
+    "battery": 53,
     "sleep": 75,
     "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-05-30",
-      "vo2MaxPreciseValue": 42.3,
+      "calendarDate": "2026-06-02",
+      "vo2MaxPreciseValue": 42.1,
       "vo2MaxValue": 42.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "5k zone 2",
+      "date": "2026-06-02",
+      "distanceKm": 5.0,
+      "movingSec": 2648,
+      "paceMinKm": 8.82,
+      "avgHR": 139.9,
+      "maxHR": 151.0,
+      "type": "Run"
+    },
     {
       "name": "Morning HIIT",
       "date": "2026-06-01",
@@ -185,16 +195,6 @@
       "avgHR": 166.8,
       "maxHR": 181.0,
       "type": "Run"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-05-18",
-      "distanceKm": 0.0,
-      "movingSec": 5472,
-      "paceMinKm": 0,
-      "avgHR": 109.2,
-      "maxHR": 160.0,
-      "type": "Workout"
     }
   ]
 }
