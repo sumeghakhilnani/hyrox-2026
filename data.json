@@ -43,9 +43,9 @@
       "level": "HIGH"
     },
     "rhr": 54,
-    "battery": 46,
+    "battery": 33,
     "sleep": 75,
-    "stress": "UNKNOWN",
+    "stress": "BALANCED",
     "vo2": {
       "calendarDate": "2026-06-02",
       "vo2MaxPreciseValue": 42.1,
