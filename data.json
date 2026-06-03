@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-06-02",
+  "lastUpdated": "2026-06-03",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 69,
-      "baselineLow": 56,
+      "weeklyAvg": 67,
+      "baselineLow": 57,
       "baselineHigh": 83,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "W",
-          "v": 0
-        },
         {
           "d": "T",
           "v": 0
@@ -35,27 +31,51 @@
         {
           "d": "T",
           "v": 0
+        },
+        {
+          "d": "W",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 75,
-      "level": "HIGH"
+      "score": 66,
+      "level": "MODERATE"
     },
-    "rhr": 54,
-    "battery": 33,
-    "sleep": 75,
-    "stress": "BALANCED",
+    "rhr": 52,
+    "battery": 43,
+    "sleep": 70,
+    "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-06-02",
-      "vo2MaxPreciseValue": 42.1,
-      "vo2MaxValue": 42.0,
+      "calendarDate": "2026-06-03",
+      "vo2MaxPreciseValue": 42.9,
+      "vo2MaxValue": 43.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
       "maxMetCategory": 0
     }
   },
   "activities": [
+    {
+      "name": "4x600m intervals",
+      "date": "2026-06-03",
+      "distanceKm": 2.76,
+      "movingSec": 1241,
+      "paceMinKm": 7.5,
+      "avgHR": 150.9,
+      "maxHR": 165.0,
+      "type": "Run"
+    },
+    {
+      "name": "Morning Run",
+      "date": "2026-06-03",
+      "distanceKm": 0.61,
+      "movingSec": 266,
+      "paceMinKm": 7.24,
+      "avgHR": 145.0,
+      "maxHR": 152.0,
+      "type": "Run"
+    },
     {
       "name": "5k zone 2",
       "date": "2026-06-02",
@@ -174,26 +194,6 @@
       "paceMinKm": 8.82,
       "avgHR": 145.9,
       "maxHR": 174.0,
-      "type": "Run"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-05-20",
-      "distanceKm": 0.0,
-      "movingSec": 5608,
-      "paceMinKm": 0,
-      "avgHR": 109.6,
-      "maxHR": 189.0,
-      "type": "Workout"
-    },
-    {
-      "name": "Morning Run",
-      "date": "2026-05-19",
-      "distanceKm": 6.0,
-      "movingSec": 2482,
-      "paceMinKm": 6.89,
-      "avgHR": 166.8,
-      "maxHR": 181.0,
       "type": "Run"
     }
   ]
