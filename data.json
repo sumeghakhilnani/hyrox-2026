@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-06-03",
+  "lastUpdated": "2026-06-04",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 67,
-      "baselineLow": 57,
+      "weeklyAvg": 68,
+      "baselineLow": 56,
       "baselineHigh": 83,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "T",
-          "v": 0
-        },
         {
           "d": "F",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "W",
           "v": 0
+        },
+        {
+          "d": "T",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 66,
-      "level": "MODERATE"
+      "score": 81,
+      "level": "HIGH"
     },
     "rhr": 52,
-    "battery": 35,
-    "sleep": 70,
+    "battery": 56,
+    "sleep": 79,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-06-03",
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning Yoga",
+      "date": "2026-06-04",
+      "distanceKm": 0.0,
+      "movingSec": 3460,
+      "paceMinKm": 0,
+      "avgHR": 90.5,
+      "maxHR": 116.0,
+      "type": "Yoga"
+    },
     {
       "name": "4x600m intervals",
       "date": "2026-06-03",
@@ -185,16 +195,6 @@
       "avgHR": 107.8,
       "maxHR": 163.0,
       "type": "Workout"
-    },
-    {
-      "name": "9k zone 2 + 3k @7",
-      "date": "2026-05-21",
-      "distanceKm": 12.01,
-      "movingSec": 6356,
-      "paceMinKm": 8.82,
-      "avgHR": 145.9,
-      "maxHR": 174.0,
-      "type": "Run"
     }
   ]
 }
