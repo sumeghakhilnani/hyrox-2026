@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-06-05",
+  "lastUpdated": "2026-06-06",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 64,
+      "weeklyAvg": 63,
       "baselineLow": 57,
       "baselineHigh": 83,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "S",
-          "v": 0
-        },
         {
           "d": "S",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "F",
           "v": 0
+        },
+        {
+          "d": "S",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 81,
-      "level": "HIGH"
+      "score": 52,
+      "level": "MODERATE"
     },
     "rhr": 54,
-    "battery": 45,
-    "sleep": 83,
+    "battery": 74,
+    "sleep": 75,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-06-05",
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning HIIT",
+      "date": "2026-06-06",
+      "distanceKm": 0.0,
+      "movingSec": 3132,
+      "paceMinKm": 0,
+      "avgHR": 148.5,
+      "maxHR": 185.0,
+      "type": "Workout"
+    },
     {
       "name": "Morning Run",
       "date": "2026-06-05",
@@ -185,16 +195,6 @@
       "avgHR": 120.3,
       "maxHR": 180.0,
       "type": "Workout"
-    },
-    {
-      "name": "Half Hyrox Sim",
-      "date": "2026-05-23",
-      "distanceKm": 4.71,
-      "movingSec": 3588,
-      "paceMinKm": 12.69,
-      "avgHR": 165.9,
-      "maxHR": 197.0,
-      "type": "Run"
     }
   ]
 }
