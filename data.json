@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-06-09",
+  "lastUpdated": "2026-06-10",
   "recovery": {
     "hrv": {
       "lastNight": 0,
       "weeklyAvg": 54,
       "baselineLow": 57,
-      "baselineHigh": 84,
+      "baselineHigh": 83,
       "status": "UNBALANCED",
       "sparkline": [
-        {
-          "d": "W",
-          "v": 0
-        },
         {
           "d": "T",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "T",
           "v": 0
+        },
+        {
+          "d": "W",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 43,
-      "level": "LOW"
+      "score": 60,
+      "level": "MODERATE"
     },
-    "rhr": 57,
-    "battery": 31,
-    "sleep": 69,
+    "rhr": 54,
+    "battery": 60,
+    "sleep": 80,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-06-09",
@@ -56,6 +56,26 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning HIIT",
+      "date": "2026-06-10",
+      "distanceKm": 0.0,
+      "movingSec": 4357,
+      "paceMinKm": 0,
+      "avgHR": 119.2,
+      "maxHR": 164.0,
+      "type": "Workout"
+    },
+    {
+      "name": "80m burpee broad jumps",
+      "date": "2026-06-10",
+      "distanceKm": 0.0,
+      "movingSec": 543,
+      "paceMinKm": 0,
+      "avgHR": 148.5,
+      "maxHR": 167.0,
+      "type": "Workout"
+    },
     {
       "name": "6x1km",
       "date": "2026-06-09",
@@ -174,26 +194,6 @@
       "paceMinKm": 0,
       "avgHR": 132.1,
       "maxHR": 170.0,
-      "type": "Workout"
-    },
-    {
-      "name": "Zone 2 run",
-      "date": "2026-05-28",
-      "distanceKm": 13.0,
-      "movingSec": 7373,
-      "paceMinKm": 9.45,
-      "avgHR": 140.4,
-      "maxHR": 152.0,
-      "type": "Run"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-05-27",
-      "distanceKm": 0.0,
-      "movingSec": 5101,
-      "paceMinKm": 0,
-      "avgHR": 108.5,
-      "maxHR": 182.0,
       "type": "Workout"
     }
   ]
