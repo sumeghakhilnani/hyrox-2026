@@ -43,7 +43,7 @@
       "level": "LOW"
     },
     "rhr": 55,
-    "battery": 72,
+    "battery": 45,
     "sleep": 77,
     "stress": "UNKNOWN",
     "vo2": {
@@ -57,7 +57,7 @@
   },
   "activities": [
     {
-      "name": "Morning Run",
+      "name": "6 x 600 m + stations",
       "date": "2026-06-13",
       "distanceKm": 4.72,
       "movingSec": 4169,
