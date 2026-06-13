@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-06-12",
+  "lastUpdated": "2026-06-13",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 55,
+      "weeklyAvg": 56,
       "baselineLow": 58,
       "baselineHigh": 83,
       "status": "UNBALANCED",
       "sparkline": [
-        {
-          "d": "S",
-          "v": 0
-        },
         {
           "d": "S",
           "v": 0
@@ -35,27 +31,41 @@
         {
           "d": "F",
           "v": 0
+        },
+        {
+          "d": "S",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 59,
-      "level": "MODERATE"
+      "score": 45,
+      "level": "LOW"
     },
-    "rhr": 57,
-    "battery": 45,
-    "sleep": 70,
+    "rhr": 55,
+    "battery": 72,
+    "sleep": 77,
     "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-06-11",
-      "vo2MaxPreciseValue": 42.8,
-      "vo2MaxValue": 43.0,
+      "calendarDate": "2026-06-13",
+      "vo2MaxPreciseValue": 42.2,
+      "vo2MaxValue": 42.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
       "maxMetCategory": 0
     }
   },
   "activities": [
+    {
+      "name": "Morning Run",
+      "date": "2026-06-13",
+      "distanceKm": 4.72,
+      "movingSec": 4169,
+      "paceMinKm": 14.72,
+      "avgHR": 161.1,
+      "maxHR": 199.0,
+      "type": "Run"
+    },
     {
       "name": "8k Zone 2",
       "date": "2026-06-11",
@@ -185,16 +195,6 @@
       "avgHR": 155.9,
       "maxHR": 196.0,
       "type": "Run"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-05-30",
-      "distanceKm": 0.0,
-      "movingSec": 834,
-      "paceMinKm": 0,
-      "avgHR": 119.0,
-      "maxHR": 151.0,
-      "type": "Workout"
     }
   ]
 }
