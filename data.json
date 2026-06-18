@@ -39,11 +39,11 @@
       ]
     },
     "readiness": {
-      "score": 47,
-      "level": "LOW"
+      "score": 50,
+      "level": "MODERATE"
     },
     "rhr": 54,
-    "battery": 51,
+    "battery": 40,
     "sleep": 72,
     "stress": "UNKNOWN",
     "vo2": {
