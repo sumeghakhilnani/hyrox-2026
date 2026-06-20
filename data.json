@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-19",
+  "lastUpdated": "2026-06-20",
   "recovery": {
     "hrv": {
       "lastNight": 0,
@@ -8,10 +8,6 @@
       "baselineHigh": 83,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "S",
-          "v": 0
-        },
         {
           "d": "S",
           "v": 0
@@ -35,20 +31,24 @@
         {
           "d": "F",
           "v": 0
+        },
+        {
+          "d": "S",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 66,
-      "level": "MODERATE"
+      "score": 11,
+      "level": "POOR"
     },
-    "rhr": 55,
-    "battery": 74,
-    "sleep": 80,
+    "rhr": 53,
+    "battery": 54,
+    "sleep": 81,
     "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-06-18",
-      "vo2MaxPreciseValue": 42.2,
+      "calendarDate": "2026-06-20",
+      "vo2MaxPreciseValue": 41.8,
       "vo2MaxValue": 42.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Full Hyrox Simulation",
+      "date": "2026-06-20",
+      "distanceKm": 9.38,
+      "movingSec": 6819,
+      "paceMinKm": 12.12,
+      "avgHR": 168.8,
+      "maxHR": 199.0,
+      "type": "Run"
+    },
     {
       "name": "8k Zone 2",
       "date": "2026-06-18",
@@ -185,16 +195,6 @@
       "avgHR": 90.5,
       "maxHR": 116.0,
       "type": "Yoga"
-    },
-    {
-      "name": "4x600m intervals",
-      "date": "2026-06-03",
-      "distanceKm": 2.76,
-      "movingSec": 1241,
-      "paceMinKm": 7.5,
-      "avgHR": 150.9,
-      "maxHR": 165.0,
-      "type": "Run"
     }
   ]
 }
