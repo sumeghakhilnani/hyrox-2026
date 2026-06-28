@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-06-27",
+  "lastUpdated": "2026-06-28",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 67,
+      "weeklyAvg": 66,
       "baselineLow": 58,
       "baselineHigh": 82,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "S",
-          "v": 0
-        },
         {
           "d": "M",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "S",
           "v": 0
+        },
+        {
+          "d": "S",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 52,
+      "score": 54,
       "level": "MODERATE"
     },
-    "rhr": 52,
-    "battery": 56,
-    "sleep": 76,
+    "rhr": 51,
+    "battery": 66,
+    "sleep": 60,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-06-27",
@@ -56,6 +56,26 @@
     }
   },
   "activities": [
+    {
+      "name": "30 min recovery run",
+      "date": "2026-06-28",
+      "distanceKm": 3.86,
+      "movingSec": 1810,
+      "paceMinKm": 7.81,
+      "avgHR": 137.3,
+      "maxHR": 148.0,
+      "type": "Run"
+    },
+    {
+      "name": "Morning Yoga",
+      "date": "2026-06-28",
+      "distanceKm": 0.0,
+      "movingSec": 1719,
+      "paceMinKm": 0,
+      "avgHR": 78.9,
+      "maxHR": 104.0,
+      "type": "Yoga"
+    },
     {
       "name": "Hyrox simulation 2",
       "date": "2026-06-27",
@@ -175,26 +195,6 @@
       "avgHR": 161.1,
       "maxHR": 199.0,
       "type": "Run"
-    },
-    {
-      "name": "8k Zone 2",
-      "date": "2026-06-11",
-      "distanceKm": 8.0,
-      "movingSec": 4469,
-      "paceMinKm": 9.31,
-      "avgHR": 139.3,
-      "maxHR": 153.0,
-      "type": "Run"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-06-10",
-      "distanceKm": 0.0,
-      "movingSec": 4357,
-      "paceMinKm": 0,
-      "avgHR": 119.2,
-      "maxHR": 164.0,
-      "type": "Workout"
     }
   ]
 }
