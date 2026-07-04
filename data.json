@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-07-03",
+  "lastUpdated": "2026-07-04",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 0,
-      "baselineLow": 56,
+      "weeklyAvg": 60,
+      "baselineLow": 59,
       "baselineHigh": 82,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "S",
-          "v": 0
-        },
         {
           "d": "S",
           "v": 0
@@ -35,17 +31,41 @@
         {
           "d": "F",
           "v": 0
+        },
+        {
+          "d": "S",
+          "v": 0
         }
       ]
     },
-    "readiness": {},
-    "rhr": 0,
-    "battery": 0,
-    "sleep": 0,
-    "stress": "CALM",
-    "vo2": 0
+    "readiness": {
+      "score": 24,
+      "level": "POOR"
+    },
+    "rhr": 55,
+    "battery": 41,
+    "sleep": 76,
+    "stress": "UNKNOWN",
+    "vo2": {
+      "calendarDate": "2026-07-04",
+      "vo2MaxPreciseValue": 42.2,
+      "vo2MaxValue": 42.0,
+      "fitnessAge": null,
+      "fitnessAgeDescription": null,
+      "maxMetCategory": 0
+    }
   },
   "activities": [
+    {
+      "name": "Hyrox simulation 3",
+      "date": "2026-07-04",
+      "distanceKm": 9.7,
+      "movingSec": 7304,
+      "paceMinKm": 12.55,
+      "avgHR": 166.2,
+      "maxHR": 201.0,
+      "type": "Run"
+    },
     {
       "name": "Morning Run",
       "date": "2026-07-02",
@@ -174,16 +194,6 @@
       "paceMinKm": 12.12,
       "avgHR": 168.8,
       "maxHR": 199.0,
-      "type": "Run"
-    },
-    {
-      "name": "8k Zone 2",
-      "date": "2026-06-18",
-      "distanceKm": 8.0,
-      "movingSec": 4340,
-      "paceMinKm": 9.04,
-      "avgHR": 139.1,
-      "maxHR": 148.0,
       "type": "Run"
     }
   ]
