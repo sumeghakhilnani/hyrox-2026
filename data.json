@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-07-04",
+  "lastUpdated": "2026-07-05",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 60,
+      "weeklyAvg": 59,
       "baselineLow": 59,
       "baselineHigh": 82,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "S",
-          "v": 0
-        },
         {
           "d": "M",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "S",
           "v": 0
+        },
+        {
+          "d": "S",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 24,
-      "level": "POOR"
+      "score": 38,
+      "level": "LOW"
     },
-    "rhr": 55,
-    "battery": 41,
-    "sleep": 76,
+    "rhr": 54,
+    "battery": 65,
+    "sleep": 73,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-07-04",
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning Yoga",
+      "date": "2026-07-05",
+      "distanceKm": 0.0,
+      "movingSec": 1406,
+      "paceMinKm": 0,
+      "avgHR": 82.2,
+      "maxHR": 111.0,
+      "type": "Yoga"
+    },
     {
       "name": "Hyrox simulation 3",
       "date": "2026-07-04",
@@ -185,16 +195,6 @@
       "avgHR": 119.3,
       "maxHR": 172.0,
       "type": "Workout"
-    },
-    {
-      "name": "Full Hyrox Simulation",
-      "date": "2026-06-20",
-      "distanceKm": 9.38,
-      "movingSec": 6819,
-      "paceMinKm": 12.12,
-      "avgHR": 168.8,
-      "maxHR": 199.0,
-      "type": "Run"
     }
   ]
 }
