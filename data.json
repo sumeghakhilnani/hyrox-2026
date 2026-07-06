@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-07-05",
+  "lastUpdated": "2026-07-06",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 59,
+      "weeklyAvg": 58,
       "baselineLow": 59,
       "baselineHigh": 82,
-      "status": "BALANCED",
+      "status": "UNBALANCED",
       "sparkline": [
-        {
-          "d": "M",
-          "v": 0
-        },
         {
           "d": "T",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "S",
           "v": 0
+        },
+        {
+          "d": "M",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 38,
-      "level": "LOW"
+      "score": 63,
+      "level": "MODERATE"
     },
-    "rhr": 54,
-    "battery": 65,
-    "sleep": 73,
+    "rhr": 53,
+    "battery": 67,
+    "sleep": 76,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-07-04",
@@ -56,6 +56,26 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning HIIT",
+      "date": "2026-07-06",
+      "distanceKm": 0.0,
+      "movingSec": 4681,
+      "paceMinKm": 0,
+      "avgHR": 122.3,
+      "maxHR": 187.0,
+      "type": "Workout"
+    },
+    {
+      "name": "Evening Swim",
+      "date": "2026-07-05",
+      "distanceKm": 0.33,
+      "movingSec": 386,
+      "paceMinKm": 19.79,
+      "avgHR": 102.8,
+      "maxHR": 130.0,
+      "type": "Swim"
+    },
     {
       "name": "Morning Yoga",
       "date": "2026-07-05",
@@ -174,26 +194,6 @@
       "paceMinKm": 0,
       "avgHR": 114.5,
       "maxHR": 165.0,
-      "type": "Workout"
-    },
-    {
-      "name": "6x1km",
-      "date": "2026-06-23",
-      "distanceKm": 7.82,
-      "movingSec": 3354,
-      "paceMinKm": 7.15,
-      "avgHR": 150.2,
-      "maxHR": 186.0,
-      "type": "Run"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-06-22",
-      "distanceKm": 0.0,
-      "movingSec": 4436,
-      "paceMinKm": 0,
-      "avgHR": 119.3,
-      "maxHR": 172.0,
       "type": "Workout"
     }
   ]
