@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-07-07",
+  "lastUpdated": "2026-07-08",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 55,
+      "weeklyAvg": 54,
       "baselineLow": 59,
-      "baselineHigh": 82,
-      "status": "UNBALANCED",
+      "baselineHigh": 81,
+      "status": "LOW",
       "sparkline": [
-        {
-          "d": "W",
-          "v": 0
-        },
         {
           "d": "T",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "T",
           "v": 0
+        },
+        {
+          "d": "W",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 48,
-      "level": "LOW"
+      "score": 50,
+      "level": "MODERATE"
     },
-    "rhr": 54,
-    "battery": 45,
-    "sleep": 76,
+    "rhr": 56,
+    "battery": 55,
+    "sleep": 66,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-07-07",
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning HIIT",
+      "date": "2026-07-08",
+      "distanceKm": 0.0,
+      "movingSec": 4756,
+      "paceMinKm": 0,
+      "avgHR": 122.0,
+      "maxHR": 182.0,
+      "type": "Workout"
+    },
     {
       "name": "7x1km",
       "date": "2026-07-07",
@@ -185,16 +195,6 @@
       "avgHR": 97.1,
       "maxHR": 139.0,
       "type": "Walk"
-    },
-    {
-      "name": "9k zone 2",
-      "date": "2026-06-25",
-      "distanceKm": 9.0,
-      "movingSec": 4705,
-      "paceMinKm": 8.71,
-      "avgHR": 138.4,
-      "maxHR": 151.0,
-      "type": "Run"
     }
   ]
 }
