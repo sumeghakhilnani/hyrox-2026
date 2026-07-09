@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08",
+  "lastUpdated": "2026-07-09",
   "recovery": {
     "hrv": {
       "lastNight": 0,
@@ -8,10 +8,6 @@
       "baselineHigh": 81,
       "status": "LOW",
       "sparkline": [
-        {
-          "d": "T",
-          "v": 0
-        },
         {
           "d": "F",
           "v": 0
@@ -35,27 +31,51 @@
         {
           "d": "W",
           "v": 0
+        },
+        {
+          "d": "T",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 50,
-      "level": "MODERATE"
+      "score": 35,
+      "level": "LOW"
     },
-    "rhr": 56,
-    "battery": 47,
-    "sleep": 66,
+    "rhr": 57,
+    "battery": 50,
+    "sleep": 67,
     "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-07-07",
-      "vo2MaxPreciseValue": 42.6,
-      "vo2MaxValue": 43.0,
+      "calendarDate": "2026-07-09",
+      "vo2MaxPreciseValue": 42.2,
+      "vo2MaxValue": 42.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
       "maxMetCategory": 0
     }
   },
   "activities": [
+    {
+      "name": "Zone 2 Run",
+      "date": "2026-07-09",
+      "distanceKm": 6.51,
+      "movingSec": 3473,
+      "paceMinKm": 8.9,
+      "avgHR": 138.5,
+      "maxHR": 147.0,
+      "type": "Run"
+    },
+    {
+      "name": "Night Workout",
+      "date": "2026-07-08",
+      "distanceKm": 0.0,
+      "movingSec": 334,
+      "paceMinKm": 0,
+      "avgHR": 66.6,
+      "maxHR": 90.0,
+      "type": "Workout"
+    },
     {
       "name": "Morning HIIT",
       "date": "2026-07-08",
@@ -175,26 +195,6 @@
       "avgHR": 78.9,
       "maxHR": 104.0,
       "type": "Yoga"
-    },
-    {
-      "name": "Hyrox simulation 2",
-      "date": "2026-06-27",
-      "distanceKm": 9.39,
-      "movingSec": 7013,
-      "paceMinKm": 12.46,
-      "avgHR": 165.4,
-      "maxHR": 199.0,
-      "type": "Run"
-    },
-    {
-      "name": "Evening Walk",
-      "date": "2026-06-26",
-      "distanceKm": 1.88,
-      "movingSec": 1670,
-      "paceMinKm": 14.8,
-      "avgHR": 97.1,
-      "maxHR": 139.0,
-      "type": "Walk"
     }
   ]
 }
