@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-07-14",
+  "lastUpdated": "2026-07-15",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 50,
+      "weeklyAvg": 51,
       "baselineLow": 58,
       "baselineHigh": 80,
       "status": "LOW",
       "sparkline": [
-        {
-          "d": "W",
-          "v": 0
-        },
         {
           "d": "T",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "T",
           "v": 0
+        },
+        {
+          "d": "W",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 58,
+      "score": 64,
       "level": "MODERATE"
     },
-    "rhr": 60,
-    "battery": 48,
-    "sleep": 73,
+    "rhr": 57,
+    "battery": 56,
+    "sleep": 82,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-07-09",
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Zone 2 run",
+      "date": "2026-07-15",
+      "distanceKm": 4.01,
+      "movingSec": 2369,
+      "paceMinKm": 9.85,
+      "avgHR": 140.0,
+      "maxHR": 150.0,
+      "type": "Run"
+    },
     {
       "name": "Morning HIIT",
       "date": "2026-07-11",
@@ -185,16 +195,6 @@
       "avgHR": 112.9,
       "maxHR": 165.0,
       "type": "Workout"
-    },
-    {
-      "name": "30 min recovery run",
-      "date": "2026-06-28",
-      "distanceKm": 3.86,
-      "movingSec": 1810,
-      "paceMinKm": 7.81,
-      "avgHR": 137.3,
-      "maxHR": 148.0,
-      "type": "Run"
     }
   ]
 }
