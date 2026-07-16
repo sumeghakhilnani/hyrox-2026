@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-07-15",
+  "lastUpdated": "2026-07-16",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 51,
+      "weeklyAvg": 50,
       "baselineLow": 58,
       "baselineHigh": 80,
       "status": "LOW",
       "sparkline": [
-        {
-          "d": "T",
-          "v": 0
-        },
         {
           "d": "F",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "W",
           "v": 0
+        },
+        {
+          "d": "T",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 64,
+      "score": 67,
       "level": "MODERATE"
     },
-    "rhr": 57,
-    "battery": 41,
-    "sleep": 82,
+    "rhr": 59,
+    "battery": 52,
+    "sleep": 76,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-07-09",
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning Yoga",
+      "date": "2026-07-16",
+      "distanceKm": 0.0,
+      "movingSec": 3480,
+      "paceMinKm": 0,
+      "avgHR": 92.5,
+      "maxHR": 137.0,
+      "type": "Yoga"
+    },
     {
       "name": "Zone 2 run",
       "date": "2026-07-15",
@@ -185,16 +195,6 @@
       "avgHR": 149.4,
       "maxHR": 171.0,
       "type": "Run"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-06-29",
-      "distanceKm": 0.0,
-      "movingSec": 4667,
-      "paceMinKm": 0,
-      "avgHR": 112.9,
-      "maxHR": 165.0,
-      "type": "Workout"
     }
   ]
 }
