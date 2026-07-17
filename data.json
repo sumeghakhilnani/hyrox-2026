@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-07-16",
+  "lastUpdated": "2026-07-17",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 50,
-      "baselineLow": 58,
+      "weeklyAvg": 48,
+      "baselineLow": 57,
       "baselineHigh": 80,
       "status": "LOW",
       "sparkline": [
-        {
-          "d": "F",
-          "v": 0
-        },
         {
           "d": "S",
           "v": 0
@@ -35,27 +31,41 @@
         {
           "d": "T",
           "v": 0
+        },
+        {
+          "d": "F",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 67,
+      "score": 53,
       "level": "MODERATE"
     },
-    "rhr": 59,
-    "battery": 43,
-    "sleep": 76,
+    "rhr": 61,
+    "battery": 39,
+    "sleep": 66,
     "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-07-09",
-      "vo2MaxPreciseValue": 42.2,
-      "vo2MaxValue": 42.0,
+      "calendarDate": "2026-07-17",
+      "vo2MaxPreciseValue": 40.6,
+      "vo2MaxValue": 41.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
       "maxMetCategory": 0
     }
   },
   "activities": [
+    {
+      "name": "Morning Run",
+      "date": "2026-07-17",
+      "distanceKm": 5.0,
+      "movingSec": 2620,
+      "paceMinKm": 8.73,
+      "avgHR": 143.3,
+      "maxHR": 151.0,
+      "type": "Run"
+    },
     {
       "name": "Morning Yoga",
       "date": "2026-07-16",
@@ -184,16 +194,6 @@
       "paceMinKm": 7.25,
       "avgHR": 131.8,
       "maxHR": 141.0,
-      "type": "Run"
-    },
-    {
-      "name": "5x1km",
-      "date": "2026-06-30",
-      "distanceKm": 6.52,
-      "movingSec": 2760,
-      "paceMinKm": 7.05,
-      "avgHR": 149.4,
-      "maxHR": 171.0,
       "type": "Run"
     }
   ]
