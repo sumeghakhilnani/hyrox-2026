@@ -39,23 +39,33 @@
       ]
     },
     "readiness": {
-      "score": 66,
-      "level": "MODERATE"
+      "score": 45,
+      "level": "LOW"
     },
     "rhr": 56,
-    "battery": 65,
+    "battery": 55,
     "sleep": 78,
     "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-07-17",
-      "vo2MaxPreciseValue": 40.6,
-      "vo2MaxValue": 41.0,
+      "calendarDate": "2026-07-18",
+      "vo2MaxPreciseValue": 40.3,
+      "vo2MaxValue": 40.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
       "maxMetCategory": 0
     }
   },
   "activities": [
+    {
+      "name": "5k easy + 6x20 secs all out",
+      "date": "2026-07-18",
+      "distanceKm": 5.77,
+      "movingSec": 2911,
+      "paceMinKm": 8.4,
+      "avgHR": 146.4,
+      "maxHR": 166.0,
+      "type": "Run"
+    },
     {
       "name": "Morning Run",
       "date": "2026-07-17",
@@ -184,16 +194,6 @@
       "paceMinKm": 8.8,
       "avgHR": 141.6,
       "maxHR": 155.0,
-      "type": "Run"
-    },
-    {
-      "name": "Morning Run",
-      "date": "2026-07-02",
-      "distanceKm": 1.52,
-      "movingSec": 661,
-      "paceMinKm": 7.25,
-      "avgHR": 131.8,
-      "maxHR": 141.0,
       "type": "Run"
     }
   ]
