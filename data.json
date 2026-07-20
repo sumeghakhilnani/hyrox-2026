@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-07-19",
+  "lastUpdated": "2026-07-20",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 48,
+      "weeklyAvg": 47,
       "baselineLow": 57,
       "baselineHigh": 80,
       "status": "LOW",
       "sparkline": [
-        {
-          "d": "M",
-          "v": 0
-        },
         {
           "d": "T",
           "v": 0
@@ -35,27 +31,41 @@
         {
           "d": "S",
           "v": 0
+        },
+        {
+          "d": "M",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 51,
-      "level": "MODERATE"
+      "score": 39,
+      "level": "LOW"
     },
-    "rhr": 59,
+    "rhr": 57,
     "battery": 59,
-    "sleep": 65,
+    "sleep": 80,
     "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-07-18",
-      "vo2MaxPreciseValue": 40.3,
-      "vo2MaxValue": 40.0,
+      "calendarDate": "2026-07-20",
+      "vo2MaxPreciseValue": 42.0,
+      "vo2MaxValue": 42.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
       "maxMetCategory": 0
     }
   },
   "activities": [
+    {
+      "name": "1k easy + 5x800",
+      "date": "2026-07-20",
+      "distanceKm": 5.33,
+      "movingSec": 2228,
+      "paceMinKm": 6.96,
+      "avgHR": 157.7,
+      "maxHR": 173.0,
+      "type": "Run"
+    },
     {
       "name": "5k easy + 6x20 secs all out",
       "date": "2026-07-18",
@@ -184,16 +194,6 @@
       "paceMinKm": 12.55,
       "avgHR": 166.2,
       "maxHR": 201.0,
-      "type": "Run"
-    },
-    {
-      "name": "Morning Run",
-      "date": "2026-07-02",
-      "distanceKm": 5.0,
-      "movingSec": 2643,
-      "paceMinKm": 8.8,
-      "avgHR": 141.6,
-      "maxHR": 155.0,
       "type": "Run"
     }
   ]
