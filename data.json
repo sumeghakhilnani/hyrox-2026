@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-07-25",
+  "lastUpdated": "2026-07-26",
   "recovery": {
     "hrv": {
       "lastNight": 0,
       "weeklyAvg": 49,
-      "baselineLow": 55,
-      "baselineHigh": 80,
+      "baselineLow": 54,
+      "baselineHigh": 79,
       "status": "LOW",
       "sparkline": [
-        {
-          "d": "S",
-          "v": 0
-        },
         {
           "d": "M",
           "v": 0
@@ -35,15 +31,19 @@
         {
           "d": "S",
           "v": 0
+        },
+        {
+          "d": "S",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 44,
-      "level": "LOW"
+      "score": 58,
+      "level": "MODERATE"
     },
-    "rhr": 0,
-    "battery": 52,
+    "rhr": 60,
+    "battery": 63,
     "sleep": 0,
     "stress": "UNKNOWN",
     "vo2": {
