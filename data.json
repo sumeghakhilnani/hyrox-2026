@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-07-26",
+  "lastUpdated": "2026-07-27",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 49,
-      "baselineLow": 54,
-      "baselineHigh": 79,
-      "status": "LOW",
+      "weeklyAvg": 0,
+      "baselineLow": 56,
+      "baselineHigh": 82,
+      "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "M",
-          "v": 0
-        },
         {
           "d": "T",
           "v": 0
@@ -35,27 +31,31 @@
         {
           "d": "S",
           "v": 0
+        },
+        {
+          "d": "M",
+          "v": 0
         }
       ]
     },
-    "readiness": {
-      "score": 58,
-      "level": "MODERATE"
-    },
-    "rhr": 60,
-    "battery": 63,
+    "readiness": {},
+    "rhr": 0,
+    "battery": 0,
     "sleep": 0,
-    "stress": "UNKNOWN",
-    "vo2": {
-      "calendarDate": "2026-07-21",
-      "vo2MaxPreciseValue": 40.1,
-      "vo2MaxValue": 40.0,
-      "fitnessAge": null,
-      "fitnessAgeDescription": null,
-      "maxMetCategory": 0
-    }
+    "stress": "CALM",
+    "vo2": 0
   },
   "activities": [
+    {
+      "name": "Hyrox open solo Delhi 2026",
+      "date": "2026-07-26",
+      "distanceKm": 8.91,
+      "movingSec": 7151,
+      "paceMinKm": 13.38,
+      "avgHR": 169.2,
+      "maxHR": 196.0,
+      "type": "Run"
+    },
     {
       "name": "Morning Yoga",
       "date": "2026-07-23",
@@ -185,16 +185,6 @@
       "avgHR": 122.0,
       "maxHR": 182.0,
       "type": "Workout"
-    },
-    {
-      "name": "7x1km",
-      "date": "2026-07-07",
-      "distanceKm": 8.74,
-      "movingSec": 3653,
-      "paceMinKm": 6.96,
-      "avgHR": 160.4,
-      "maxHR": 184.0,
-      "type": "Run"
     }
   ]
 }
