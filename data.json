@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-07-28",
+  "lastUpdated": "2026-07-29",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 0,
-      "baselineLow": 56,
-      "baselineHigh": 82,
-      "status": "BALANCED",
+      "weeklyAvg": 50,
+      "baselineLow": 53,
+      "baselineHigh": 78,
+      "status": "UNBALANCED",
       "sparkline": [
-        {
-          "d": "W",
-          "v": 0
-        },
         {
           "d": "T",
           "v": 0
@@ -35,15 +31,29 @@
         {
           "d": "T",
           "v": 0
+        },
+        {
+          "d": "W",
+          "v": 0
         }
       ]
     },
-    "readiness": {},
-    "rhr": 0,
-    "battery": 0,
-    "sleep": 0,
-    "stress": "CALM",
-    "vo2": 0
+    "readiness": {
+      "score": 41,
+      "level": "LOW"
+    },
+    "rhr": 57,
+    "battery": 60,
+    "sleep": 62,
+    "stress": "UNKNOWN",
+    "vo2": {
+      "calendarDate": "2026-07-21",
+      "vo2MaxPreciseValue": 40.1,
+      "vo2MaxValue": 40.0,
+      "fitnessAge": null,
+      "fitnessAgeDescription": null,
+      "maxMetCategory": 0
+    }
   },
   "activities": [
     {
