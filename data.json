@@ -43,7 +43,7 @@
       "level": "LOW"
     },
     "rhr": 60,
-    "battery": 49,
+    "battery": 38,
     "sleep": 59,
     "stress": "UNKNOWN",
     "vo2": {
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning Yoga",
+      "date": "2026-07-30",
+      "distanceKm": 0.0,
+      "movingSec": 3219,
+      "paceMinKm": 0,
+      "avgHR": 87.3,
+      "maxHR": 120.0,
+      "type": "Yoga"
+    },
     {
       "name": "Night Yoga",
       "date": "2026-07-29",
@@ -185,16 +195,6 @@
       "avgHR": 138.5,
       "maxHR": 147.0,
       "type": "Run"
-    },
-    {
-      "name": "Night Workout",
-      "date": "2026-07-08",
-      "distanceKm": 0.0,
-      "movingSec": 334,
-      "paceMinKm": 0,
-      "avgHR": 66.6,
-      "maxHR": 90.0,
-      "type": "Workout"
     }
   ]
 }
