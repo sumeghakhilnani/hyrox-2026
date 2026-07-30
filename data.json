@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-07-29",
+  "lastUpdated": "2026-07-30",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 50,
+      "weeklyAvg": 45,
       "baselineLow": 53,
       "baselineHigh": 78,
-      "status": "UNBALANCED",
+      "status": "LOW",
       "sparkline": [
-        {
-          "d": "T",
-          "v": 0
-        },
         {
           "d": "F",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "W",
           "v": 0
+        },
+        {
+          "d": "T",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 41,
+      "score": 34,
       "level": "LOW"
     },
-    "rhr": 57,
-    "battery": 60,
-    "sleep": 62,
+    "rhr": 60,
+    "battery": 49,
+    "sleep": 59,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-07-21",
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Night Yoga",
+      "date": "2026-07-29",
+      "distanceKm": 0.0,
+      "movingSec": 1352,
+      "paceMinKm": 0,
+      "avgHR": 88.6,
+      "maxHR": 111.0,
+      "type": "Yoga"
+    },
     {
       "name": "Hyrox open solo Delhi 2026",
       "date": "2026-07-26",
@@ -184,16 +194,6 @@
       "paceMinKm": 0,
       "avgHR": 66.6,
       "maxHR": 90.0,
-      "type": "Workout"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-07-08",
-      "distanceKm": 0.0,
-      "movingSec": 4756,
-      "paceMinKm": 0,
-      "avgHR": 122.0,
-      "maxHR": 182.0,
       "type": "Workout"
     }
   ]
