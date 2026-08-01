@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-07-31",
+  "lastUpdated": "2026-08-01",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 47,
+      "weeklyAvg": 48,
       "baselineLow": 53,
       "baselineHigh": 78,
       "status": "LOW",
       "sparkline": [
-        {
-          "d": "S",
-          "v": 0
-        },
         {
           "d": "S",
           "v": 0
@@ -35,27 +31,41 @@
         {
           "d": "F",
           "v": 0
+        },
+        {
+          "d": "S",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 24,
-      "level": "POOR"
+      "score": 33,
+      "level": "LOW"
     },
-    "rhr": 55,
-    "battery": 64,
-    "sleep": 58,
+    "rhr": 57,
+    "battery": 51,
+    "sleep": 71,
     "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-07-21",
-      "vo2MaxPreciseValue": 40.1,
-      "vo2MaxValue": 40.0,
+      "calendarDate": "2026-08-01",
+      "vo2MaxPreciseValue": 41.4,
+      "vo2MaxValue": 41.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
       "maxMetCategory": 0
     }
   },
   "activities": [
+    {
+      "name": "Recovery Run",
+      "date": "2026-08-01",
+      "distanceKm": 2.19,
+      "movingSec": 1033,
+      "paceMinKm": 7.87,
+      "avgHR": 147.3,
+      "maxHR": 160.0,
+      "type": "Run"
+    },
     {
       "name": "Morning Yoga",
       "date": "2026-07-30",
@@ -185,16 +195,6 @@
       "avgHR": 138.2,
       "maxHR": 179.0,
       "type": "Workout"
-    },
-    {
-      "name": "Zone 2 Run",
-      "date": "2026-07-09",
-      "distanceKm": 6.51,
-      "movingSec": 3473,
-      "paceMinKm": 8.9,
-      "avgHR": 138.5,
-      "maxHR": 147.0,
-      "type": "Run"
     }
   ]
 }
