@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-08-07",
+  "lastUpdated": "2026-08-08",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 0,
-      "baselineLow": 56,
-      "baselineHigh": 82,
-      "status": "BALANCED",
+      "weeklyAvg": 44,
+      "baselineLow": 51,
+      "baselineHigh": 75,
+      "status": "LOW",
       "sparkline": [
-        {
-          "d": "S",
-          "v": 0
-        },
         {
           "d": "S",
           "v": 0
@@ -35,17 +31,41 @@
         {
           "d": "F",
           "v": 0
+        },
+        {
+          "d": "S",
+          "v": 0
         }
       ]
     },
-    "readiness": {},
-    "rhr": 0,
-    "battery": 0,
-    "sleep": 0,
-    "stress": "CALM",
-    "vo2": 0
+    "readiness": {
+      "score": 24,
+      "level": "POOR"
+    },
+    "rhr": 61,
+    "battery": 41,
+    "sleep": 48,
+    "stress": "UNKNOWN",
+    "vo2": {
+      "calendarDate": "2026-08-01",
+      "vo2MaxPreciseValue": 41.4,
+      "vo2MaxValue": 41.0,
+      "fitnessAge": null,
+      "fitnessAgeDescription": null,
+      "maxMetCategory": 0
+    }
   },
   "activities": [
+    {
+      "name": "Morning HIIT",
+      "date": "2026-08-07",
+      "distanceKm": 0.0,
+      "movingSec": 3056,
+      "paceMinKm": 0,
+      "avgHR": 119.1,
+      "maxHR": 177.0,
+      "type": "Workout"
+    },
     {
       "name": "Morning Yoga",
       "date": "2026-08-06",
@@ -175,16 +195,6 @@
       "avgHR": 143.3,
       "maxHR": 151.0,
       "type": "Run"
-    },
-    {
-      "name": "Morning Yoga",
-      "date": "2026-07-16",
-      "distanceKm": 0.0,
-      "movingSec": 3480,
-      "paceMinKm": 0,
-      "avgHR": 92.5,
-      "maxHR": 137.0,
-      "type": "Yoga"
     }
   ]
 }
