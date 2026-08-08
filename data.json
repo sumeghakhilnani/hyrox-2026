@@ -39,11 +39,11 @@
       ]
     },
     "readiness": {
-      "score": 24,
+      "score": 9,
       "level": "POOR"
     },
     "rhr": 61,
-    "battery": 41,
+    "battery": 35,
     "sleep": 48,
     "stress": "UNKNOWN",
     "vo2": {
@@ -56,6 +56,26 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning Run",
+      "date": "2026-08-08",
+      "distanceKm": 2.01,
+      "movingSec": 897,
+      "paceMinKm": 7.45,
+      "avgHR": 156.3,
+      "maxHR": 164.0,
+      "type": "Run"
+    },
+    {
+      "name": "Morning Weight Training",
+      "date": "2026-08-08",
+      "distanceKm": 0.0,
+      "movingSec": 1464,
+      "paceMinKm": 0,
+      "avgHR": 108.7,
+      "maxHR": 143.0,
+      "type": "WeightTraining"
+    },
     {
       "name": "Morning HIIT",
       "date": "2026-08-07",
@@ -174,26 +194,6 @@
       "paceMinKm": 6.96,
       "avgHR": 157.7,
       "maxHR": 173.0,
-      "type": "Run"
-    },
-    {
-      "name": "5k easy + 6x20 secs all out",
-      "date": "2026-07-18",
-      "distanceKm": 5.77,
-      "movingSec": 2911,
-      "paceMinKm": 8.4,
-      "avgHR": 146.4,
-      "maxHR": 166.0,
-      "type": "Run"
-    },
-    {
-      "name": "Morning Run",
-      "date": "2026-07-17",
-      "distanceKm": 5.0,
-      "movingSec": 2620,
-      "paceMinKm": 8.73,
-      "avgHR": 143.3,
-      "maxHR": 151.0,
       "type": "Run"
     }
   ]
