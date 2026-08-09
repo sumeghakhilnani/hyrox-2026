@@ -39,23 +39,33 @@
       ]
     },
     "readiness": {
-      "score": 46,
+      "score": 25,
       "level": "LOW"
     },
     "rhr": 61,
-    "battery": 64,
+    "battery": 44,
     "sleep": 73,
     "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-08-01",
-      "vo2MaxPreciseValue": 41.4,
-      "vo2MaxValue": 41.0,
+      "calendarDate": "2026-08-09",
+      "vo2MaxPreciseValue": 39.6,
+      "vo2MaxValue": 40.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
       "maxMetCategory": 0
     }
   },
   "activities": [
+    {
+      "name": "Morning Run",
+      "date": "2026-08-09",
+      "distanceKm": 11.16,
+      "movingSec": 6052,
+      "paceMinKm": 9.04,
+      "avgHR": 146.5,
+      "maxHR": 162.0,
+      "type": "Run"
+    },
     {
       "name": "Morning Run",
       "date": "2026-08-08",
@@ -185,16 +195,6 @@
       "avgHR": 118.0,
       "maxHR": 166.0,
       "type": "Workout"
-    },
-    {
-      "name": "1k easy + 5x800",
-      "date": "2026-07-20",
-      "distanceKm": 5.33,
-      "movingSec": 2228,
-      "paceMinKm": 6.96,
-      "avgHR": 157.7,
-      "maxHR": 173.0,
-      "type": "Run"
     }
   ]
 }
