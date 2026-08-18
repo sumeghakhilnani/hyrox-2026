@@ -3,9 +3,9 @@
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 0,
-      "baselineLow": 56,
-      "baselineHigh": 82,
+      "weeklyAvg": 49,
+      "baselineLow": 49,
+      "baselineHigh": 71,
       "status": "BALANCED",
       "sparkline": [
         {
@@ -38,14 +38,44 @@
         }
       ]
     },
-    "readiness": {},
-    "rhr": 0,
-    "battery": 0,
-    "sleep": 0,
-    "stress": "CALM",
-    "vo2": 0
+    "readiness": {
+      "score": 53,
+      "level": "MODERATE"
+    },
+    "rhr": 53,
+    "battery": 69,
+    "sleep": 80,
+    "stress": "UNKNOWN",
+    "vo2": {
+      "calendarDate": "2026-08-18",
+      "vo2MaxPreciseValue": 38.9,
+      "vo2MaxValue": 39.0,
+      "fitnessAge": null,
+      "fitnessAgeDescription": null,
+      "maxMetCategory": 0
+    }
   },
   "activities": [
+    {
+      "name": "Morning Run",
+      "date": "2026-08-18",
+      "distanceKm": 4.0,
+      "movingSec": 1877,
+      "paceMinKm": 7.81,
+      "avgHR": 152.3,
+      "maxHR": 165.0,
+      "type": "Run"
+    },
+    {
+      "name": "Morning Weight Training",
+      "date": "2026-08-18",
+      "distanceKm": 0.0,
+      "movingSec": 1907,
+      "paceMinKm": 0,
+      "avgHR": 101.6,
+      "maxHR": 143.0,
+      "type": "WeightTraining"
+    },
     {
       "name": "Morning Run",
       "date": "2026-08-16",
@@ -165,26 +195,6 @@
       "avgHR": 147.3,
       "maxHR": 160.0,
       "type": "Run"
-    },
-    {
-      "name": "Morning Yoga",
-      "date": "2026-07-30",
-      "distanceKm": 0.0,
-      "movingSec": 3219,
-      "paceMinKm": 0,
-      "avgHR": 87.3,
-      "maxHR": 120.0,
-      "type": "Yoga"
-    },
-    {
-      "name": "Night Yoga",
-      "date": "2026-07-29",
-      "distanceKm": 0.0,
-      "movingSec": 1352,
-      "paceMinKm": 0,
-      "avgHR": 88.6,
-      "maxHR": 111.0,
-      "type": "Yoga"
     }
   ]
 }
