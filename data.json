@@ -3,9 +3,9 @@
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 0,
-      "baselineLow": 56,
-      "baselineHigh": 82,
+      "weeklyAvg": 52,
+      "baselineLow": 48,
+      "baselineHigh": 71,
       "status": "BALANCED",
       "sparkline": [
         {
@@ -38,14 +38,34 @@
         }
       ]
     },
-    "readiness": {},
-    "rhr": 0,
-    "battery": 0,
-    "sleep": 0,
-    "stress": "CALM",
-    "vo2": 0
+    "readiness": {
+      "score": 56,
+      "level": "MODERATE"
+    },
+    "rhr": 57,
+    "battery": 65,
+    "sleep": 77,
+    "stress": "UNKNOWN",
+    "vo2": {
+      "calendarDate": "2026-08-20",
+      "vo2MaxPreciseValue": 38.5,
+      "vo2MaxValue": 39.0,
+      "fitnessAge": null,
+      "fitnessAgeDescription": null,
+      "maxMetCategory": 0
+    }
   },
   "activities": [
+    {
+      "name": "Morning HIIT",
+      "date": "2026-08-21",
+      "distanceKm": 0.0,
+      "movingSec": 3555,
+      "paceMinKm": 0,
+      "avgHR": 114.1,
+      "maxHR": 183.0,
+      "type": "Workout"
+    },
     {
       "name": "Morning Yoga",
       "date": "2026-08-20",
@@ -175,16 +195,6 @@
       "avgHR": 108.7,
       "maxHR": 143.0,
       "type": "WeightTraining"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-08-07",
-      "distanceKm": 0.0,
-      "movingSec": 3056,
-      "paceMinKm": 0,
-      "avgHR": 119.1,
-      "maxHR": 177.0,
-      "type": "Workout"
     }
   ]
 }
