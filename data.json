@@ -3,9 +3,9 @@
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 0,
-      "baselineLow": 56,
-      "baselineHigh": 82,
+      "weeklyAvg": 53,
+      "baselineLow": 48,
+      "baselineHigh": 70,
       "status": "BALANCED",
       "sparkline": [
         {
@@ -38,12 +38,22 @@
         }
       ]
     },
-    "readiness": {},
-    "rhr": 0,
-    "battery": 0,
-    "sleep": 0,
-    "stress": "CALM",
-    "vo2": 0
+    "readiness": {
+      "score": 70,
+      "level": "MODERATE"
+    },
+    "rhr": 55,
+    "battery": 74,
+    "sleep": 77,
+    "stress": "UNKNOWN",
+    "vo2": {
+      "calendarDate": "2026-08-20",
+      "vo2MaxPreciseValue": 38.5,
+      "vo2MaxValue": 39.0,
+      "fitnessAge": null,
+      "fitnessAgeDescription": null,
+      "maxMetCategory": 0
+    }
   },
   "activities": [
     {
