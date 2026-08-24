@@ -39,11 +39,11 @@
       ]
     },
     "readiness": {
-      "score": 82,
-      "level": "HIGH"
+      "score": 71,
+      "level": "MODERATE"
     },
     "rhr": 52,
-    "battery": 98,
+    "battery": 76,
     "sleep": 78,
     "stress": "UNKNOWN",
     "vo2": {
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning HIIT",
+      "date": "2026-08-24",
+      "distanceKm": 0.0,
+      "movingSec": 3146,
+      "paceMinKm": 0,
+      "avgHR": 123.1,
+      "maxHR": 174.0,
+      "type": "Workout"
+    },
     {
       "name": "Morning Run",
       "date": "2026-08-22",
@@ -184,16 +194,6 @@
       "paceMinKm": 9.04,
       "avgHR": 146.5,
       "maxHR": 162.0,
-      "type": "Run"
-    },
-    {
-      "name": "Morning Run",
-      "date": "2026-08-08",
-      "distanceKm": 2.01,
-      "movingSec": 897,
-      "paceMinKm": 7.45,
-      "avgHR": 156.3,
-      "maxHR": 164.0,
       "type": "Run"
     }
   ]
