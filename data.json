@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-29",
+  "lastUpdated": "2026-08-30",
   "recovery": {
     "hrv": {
       "lastNight": 0,
@@ -8,10 +8,6 @@
       "baselineHigh": 82,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "S",
-          "v": 0
-        },
         {
           "d": "M",
           "v": 0
@@ -30,6 +26,10 @@
         },
         {
           "d": "F",
+          "v": 0
+        },
+        {
+          "d": "S",
           "v": 0
         },
         {
