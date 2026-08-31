@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-08-30",
+  "lastUpdated": "2026-08-31",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 0,
-      "baselineLow": 56,
-      "baselineHigh": 82,
+      "weeklyAvg": 48,
+      "baselineLow": 47,
+      "baselineHigh": 68,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "M",
-          "v": 0
-        },
         {
           "d": "T",
           "v": 0
@@ -35,17 +31,41 @@
         {
           "d": "S",
           "v": 0
+        },
+        {
+          "d": "M",
+          "v": 0
         }
       ]
     },
-    "readiness": {},
-    "rhr": 0,
-    "battery": 0,
-    "sleep": 0,
-    "stress": "CALM",
-    "vo2": 0
+    "readiness": {
+      "score": 53,
+      "level": "MODERATE"
+    },
+    "rhr": 59,
+    "battery": 53,
+    "sleep": 73,
+    "stress": "UNKNOWN",
+    "vo2": {
+      "calendarDate": "2026-08-25",
+      "vo2MaxPreciseValue": 38.1,
+      "vo2MaxValue": 38.0,
+      "fitnessAge": null,
+      "fitnessAgeDescription": null,
+      "maxMetCategory": 0
+    }
   },
   "activities": [
+    {
+      "name": "Morning HIIT",
+      "date": "2026-08-31",
+      "distanceKm": 0.0,
+      "movingSec": 3376,
+      "paceMinKm": 0,
+      "avgHR": 130.1,
+      "maxHR": 185.0,
+      "type": "Workout"
+    },
     {
       "name": "Afternoon Swim",
       "date": "2026-08-27",
@@ -174,16 +194,6 @@
       "paceMinKm": 0,
       "avgHR": 125.8,
       "maxHR": 171.0,
-      "type": "Workout"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-08-12",
-      "distanceKm": 0.0,
-      "movingSec": 3550,
-      "paceMinKm": 0,
-      "avgHR": 108.2,
-      "maxHR": 170.0,
       "type": "Workout"
     }
   ]
