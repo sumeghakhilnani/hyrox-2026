@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-08-31",
+  "lastUpdated": "2026-09-01",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 48,
+      "weeklyAvg": 45,
       "baselineLow": 47,
       "baselineHigh": 68,
-      "status": "BALANCED",
+      "status": "UNBALANCED",
       "sparkline": [
-        {
-          "d": "T",
-          "v": 0
-        },
         {
           "d": "W",
           "v": 0
@@ -35,20 +31,24 @@
         {
           "d": "M",
           "v": 0
+        },
+        {
+          "d": "T",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 53,
+      "score": 59,
       "level": "MODERATE"
     },
     "rhr": 59,
-    "battery": 42,
-    "sleep": 73,
+    "battery": 50,
+    "sleep": 78,
     "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-08-25",
-      "vo2MaxPreciseValue": 38.1,
+      "calendarDate": "2026-09-01",
+      "vo2MaxPreciseValue": 37.9,
       "vo2MaxValue": 38.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning Run",
+      "date": "2026-09-01",
+      "distanceKm": 6.0,
+      "movingSec": 3239,
+      "paceMinKm": 8.99,
+      "avgHR": 146.2,
+      "maxHR": 157.0,
+      "type": "Run"
+    },
     {
       "name": "Morning HIIT",
       "date": "2026-08-31",
@@ -184,16 +194,6 @@
       "paceMinKm": 0,
       "avgHR": 149.2,
       "maxHR": 194.0,
-      "type": "Workout"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-08-14",
-      "distanceKm": 0.0,
-      "movingSec": 3390,
-      "paceMinKm": 0,
-      "avgHR": 125.8,
-      "maxHR": 171.0,
       "type": "Workout"
     }
   ]
