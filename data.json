@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-09-07",
+  "lastUpdated": "2026-09-08",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 46,
+      "weeklyAvg": 49,
       "baselineLow": 46,
-      "baselineHigh": 66,
+      "baselineHigh": 65,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "T",
-          "v": 0
-        },
         {
           "d": "W",
           "v": 0
@@ -35,27 +31,51 @@
         {
           "d": "M",
           "v": 0
+        },
+        {
+          "d": "T",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 25,
+      "score": 28,
       "level": "LOW"
     },
-    "rhr": 55,
-    "battery": 69,
+    "rhr": 57,
+    "battery": 46,
     "sleep": 69,
     "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-09-06",
-      "vo2MaxPreciseValue": 38.6,
-      "vo2MaxValue": 39.0,
+      "calendarDate": "2026-09-08",
+      "vo2MaxPreciseValue": 40.2,
+      "vo2MaxValue": 40.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
       "maxMetCategory": 0
     }
   },
   "activities": [
+    {
+      "name": "Morning Run",
+      "date": "2026-09-08",
+      "distanceKm": 3.01,
+      "movingSec": 1300,
+      "paceMinKm": 7.21,
+      "avgHR": 156.0,
+      "maxHR": 169.0,
+      "type": "Run"
+    },
+    {
+      "name": "Morning Run",
+      "date": "2026-09-08",
+      "distanceKm": 1.9,
+      "movingSec": 833,
+      "paceMinKm": 7.3,
+      "avgHR": 148.0,
+      "maxHR": 170.0,
+      "type": "Run"
+    },
     {
       "name": "Morning HIIT",
       "date": "2026-09-07",
@@ -175,26 +195,6 @@
       "avgHR": 146.1,
       "maxHR": 154.0,
       "type": "Run"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-08-21",
-      "distanceKm": 0.0,
-      "movingSec": 3555,
-      "paceMinKm": 0,
-      "avgHR": 114.1,
-      "maxHR": 183.0,
-      "type": "Workout"
-    },
-    {
-      "name": "Morning Yoga",
-      "date": "2026-08-20",
-      "distanceKm": 0.0,
-      "movingSec": 2509,
-      "paceMinKm": 0,
-      "avgHR": 104.3,
-      "maxHR": 136.0,
-      "type": "Yoga"
     }
   ]
 }
