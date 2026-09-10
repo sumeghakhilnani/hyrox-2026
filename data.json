@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-09-09",
+  "lastUpdated": "2026-09-10",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 51,
-      "baselineLow": 46,
+      "weeklyAvg": 54,
+      "baselineLow": 45,
       "baselineHigh": 65,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "T",
-          "v": 0
-        },
         {
           "d": "F",
           "v": 0
@@ -35,20 +31,24 @@
         {
           "d": "W",
           "v": 0
+        },
+        {
+          "d": "T",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 53,
+      "score": 56,
       "level": "MODERATE"
     },
-    "rhr": 59,
-    "battery": 49,
+    "rhr": 55,
+    "battery": 61,
     "sleep": 75,
     "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-09-08",
-      "vo2MaxPreciseValue": 40.2,
+      "calendarDate": "2026-09-10",
+      "vo2MaxPreciseValue": 40.1,
       "vo2MaxValue": 40.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
@@ -56,6 +56,26 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning Yoga",
+      "date": "2026-09-10",
+      "distanceKm": 0.0,
+      "movingSec": 3142,
+      "paceMinKm": 0,
+      "avgHR": 96.6,
+      "maxHR": 143.0,
+      "type": "Yoga"
+    },
+    {
+      "name": "Morning Run",
+      "date": "2026-09-10",
+      "distanceKm": 6.02,
+      "movingSec": 3192,
+      "paceMinKm": 8.85,
+      "avgHR": 140.8,
+      "maxHR": 148.0,
+      "type": "Run"
+    },
     {
       "name": "Morning HIIT",
       "date": "2026-09-09",
@@ -175,26 +195,6 @@
       "avgHR": 103.6,
       "maxHR": 146.0,
       "type": "Swim"
-    },
-    {
-      "name": "Morning Run",
-      "date": "2026-08-25",
-      "distanceKm": 6.0,
-      "movingSec": 3239,
-      "paceMinKm": 8.99,
-      "avgHR": 140.6,
-      "maxHR": 152.0,
-      "type": "Run"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-08-24",
-      "distanceKm": 0.0,
-      "movingSec": 3146,
-      "paceMinKm": 0,
-      "avgHR": 123.1,
-      "maxHR": 174.0,
-      "type": "Workout"
     }
   ]
 }
