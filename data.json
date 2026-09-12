@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-09-11",
+  "lastUpdated": "2026-09-12",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 58,
+      "weeklyAvg": 60,
       "baselineLow": 45,
       "baselineHigh": 65,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "S",
-          "v": 0
-        },
         {
           "d": "S",
           "v": 0
@@ -35,27 +31,41 @@
         {
           "d": "F",
           "v": 0
+        },
+        {
+          "d": "S",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 71,
+      "score": 50,
       "level": "MODERATE"
     },
-    "rhr": 55,
+    "rhr": 50,
     "battery": 58,
-    "sleep": 78,
+    "sleep": 66,
     "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-09-10",
-      "vo2MaxPreciseValue": 40.1,
-      "vo2MaxValue": 40.0,
+      "calendarDate": "2026-09-12",
+      "vo2MaxPreciseValue": 39.2,
+      "vo2MaxValue": 39.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
       "maxMetCategory": 0
     }
   },
   "activities": [
+    {
+      "name": "Morning Run",
+      "date": "2026-09-12",
+      "distanceKm": 12.77,
+      "movingSec": 6455,
+      "paceMinKm": 8.42,
+      "avgHR": 154.6,
+      "maxHR": 170.0,
+      "type": "Run"
+    },
     {
       "name": "Morning Yoga",
       "date": "2026-09-10",
@@ -185,16 +195,6 @@
       "avgHR": 130.1,
       "maxHR": 185.0,
       "type": "Workout"
-    },
-    {
-      "name": "Afternoon Swim",
-      "date": "2026-08-27",
-      "distanceKm": 0.43,
-      "movingSec": 1130,
-      "paceMinKm": 43.98,
-      "avgHR": 103.6,
-      "maxHR": 146.0,
-      "type": "Swim"
     }
   ]
 }
