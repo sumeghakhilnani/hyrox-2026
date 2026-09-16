@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-09-15",
+  "lastUpdated": "2026-09-16",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 66,
+      "weeklyAvg": 68,
       "baselineLow": 45,
       "baselineHigh": 64,
       "status": "UNBALANCED",
       "sparkline": [
-        {
-          "d": "W",
-          "v": 0
-        },
         {
           "d": "T",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "T",
           "v": 0
+        },
+        {
+          "d": "W",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 35,
-      "level": "LOW"
+      "score": 52,
+      "level": "MODERATE"
     },
-    "rhr": 51,
-    "battery": 58,
-    "sleep": 55,
+    "rhr": 55,
+    "battery": 64,
+    "sleep": 85,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-09-15",
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning HIIT",
+      "date": "2026-09-16",
+      "distanceKm": 0.0,
+      "movingSec": 3279,
+      "paceMinKm": 0,
+      "avgHR": 127.3,
+      "maxHR": 161.0,
+      "type": "Workout"
+    },
     {
       "name": "8x400m",
       "date": "2026-09-15",
@@ -185,16 +195,6 @@
       "avgHR": 92.5,
       "maxHR": 101.0,
       "type": "Walk"
-    },
-    {
-      "name": "Morning Yoga",
-      "date": "2026-09-03",
-      "distanceKm": 0.0,
-      "movingSec": 3531,
-      "paceMinKm": 0,
-      "avgHR": 83.4,
-      "maxHR": 117.0,
-      "type": "Yoga"
     }
   ]
 }
