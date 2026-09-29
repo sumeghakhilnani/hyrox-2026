@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-09-28",
+  "lastUpdated": "2026-09-29",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 61,
+      "weeklyAvg": 59,
       "baselineLow": 46,
-      "baselineHigh": 68,
+      "baselineHigh": 69,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "T",
-          "v": 0
-        },
         {
           "d": "W",
           "v": 0
@@ -35,20 +31,24 @@
         {
           "d": "M",
           "v": 0
+        },
+        {
+          "d": "T",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 66,
+      "score": 68,
       "level": "MODERATE"
     },
-    "rhr": 54,
-    "battery": 68,
-    "sleep": 77,
+    "rhr": 57,
+    "battery": 52,
+    "sleep": 83,
     "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-09-26",
-      "vo2MaxPreciseValue": 39.7,
+      "calendarDate": "2026-09-29",
+      "vo2MaxPreciseValue": 40.4,
       "vo2MaxValue": 40.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
@@ -56,6 +56,26 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning Run",
+      "date": "2026-09-29",
+      "distanceKm": 5.21,
+      "movingSec": 2398,
+      "paceMinKm": 7.67,
+      "avgHR": 153.7,
+      "maxHR": 175.0,
+      "type": "Run"
+    },
+    {
+      "name": "400m Repeats with Runna \u2705",
+      "date": "2026-09-29",
+      "distanceKm": 5.73,
+      "movingSec": 2397,
+      "paceMinKm": 6.97,
+      "avgHR": null,
+      "maxHR": null,
+      "type": "Run"
+    },
     {
       "name": "Strength endurance",
       "date": "2026-09-28",
@@ -175,26 +195,6 @@
       "avgHR": 123.3,
       "maxHR": 167.0,
       "type": "Workout"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-09-13",
-      "distanceKm": 0.0,
-      "movingSec": 2441,
-      "paceMinKm": 0,
-      "avgHR": 118.7,
-      "maxHR": 169.0,
-      "type": "Workout"
-    },
-    {
-      "name": "Morning Run",
-      "date": "2026-09-12",
-      "distanceKm": 12.77,
-      "movingSec": 6455,
-      "paceMinKm": 8.42,
-      "avgHR": 154.6,
-      "maxHR": 170.0,
-      "type": "Run"
     }
   ]
 }
