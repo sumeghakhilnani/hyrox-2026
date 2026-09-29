@@ -43,7 +43,7 @@
       "level": "MODERATE"
     },
     "rhr": 57,
-    "battery": 52,
+    "battery": 42,
     "sleep": 83,
     "stress": "UNKNOWN",
     "vo2": {
@@ -56,16 +56,6 @@
     }
   },
   "activities": [
-    {
-      "name": "Morning Run",
-      "date": "2026-09-29",
-      "distanceKm": 5.21,
-      "movingSec": 2398,
-      "paceMinKm": 7.67,
-      "avgHR": 153.7,
-      "maxHR": 175.0,
-      "type": "Run"
-    },
     {
       "name": "400m Repeats with Runna \u2705",
       "date": "2026-09-29",
@@ -194,6 +184,16 @@
       "paceMinKm": 0,
       "avgHR": 123.3,
       "maxHR": 167.0,
+      "type": "Workout"
+    },
+    {
+      "name": "Morning HIIT",
+      "date": "2026-09-13",
+      "distanceKm": 0.0,
+      "movingSec": 2441,
+      "paceMinKm": 0,
+      "avgHR": 118.7,
+      "maxHR": 169.0,
       "type": "Workout"
     }
   ]
