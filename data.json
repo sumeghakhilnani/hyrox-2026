@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-09-29",
+  "lastUpdated": "2026-09-30",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 59,
-      "baselineLow": 46,
+      "weeklyAvg": 56,
+      "baselineLow": 47,
       "baselineHigh": 69,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "W",
-          "v": 0
-        },
         {
           "d": "T",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "T",
           "v": 0
+        },
+        {
+          "d": "W",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 68,
+      "score": 62,
       "level": "MODERATE"
     },
-    "rhr": 57,
-    "battery": 42,
-    "sleep": 83,
+    "rhr": 58,
+    "battery": 48,
+    "sleep": 75,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-09-29",
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Strength Endurance - 40 min AMRAP \ud83d\udc80",
+      "date": "2026-09-30",
+      "distanceKm": 0.0,
+      "movingSec": 3444,
+      "paceMinKm": 0,
+      "avgHR": 136.6,
+      "maxHR": 182.0,
+      "type": "Workout"
+    },
     {
       "name": "400m Repeats with Runna \u2705",
       "date": "2026-09-29",
@@ -184,16 +194,6 @@
       "paceMinKm": 0,
       "avgHR": 123.3,
       "maxHR": 167.0,
-      "type": "Workout"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-09-13",
-      "distanceKm": 0.0,
-      "movingSec": 2441,
-      "paceMinKm": 0,
-      "avgHR": 118.7,
-      "maxHR": 169.0,
       "type": "Workout"
     }
   ]
