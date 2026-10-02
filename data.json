@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-10-01",
+  "lastUpdated": "2026-10-02",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 53,
+      "weeklyAvg": 54,
       "baselineLow": 47,
       "baselineHigh": 69,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "F",
-          "v": 0
-        },
         {
           "d": "S",
           "v": 0
@@ -35,17 +31,21 @@
         {
           "d": "T",
           "v": 0
+        },
+        {
+          "d": "F",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 44,
-      "level": "LOW"
+      "score": 63,
+      "level": "MODERATE"
     },
-    "rhr": 59,
-    "battery": 40,
-    "sleep": 53,
-    "stress": "UNKNOWN",
+    "rhr": 0,
+    "battery": 0,
+    "sleep": 86,
+    "stress": "CALM",
     "vo2": {
       "calendarDate": "2026-09-29",
       "vo2MaxPreciseValue": 40.4,
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning HIIT",
+      "date": "2026-10-02",
+      "distanceKm": 0.0,
+      "movingSec": 4084,
+      "paceMinKm": 0,
+      "avgHR": 114.0,
+      "maxHR": 184.0,
+      "type": "Workout"
+    },
     {
       "name": "Strength Endurance - 40 min AMRAP \ud83d\udc80",
       "date": "2026-09-30",
@@ -185,16 +195,6 @@
       "avgHR": 144.5,
       "maxHR": 161.0,
       "type": "Run"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-09-14",
-      "distanceKm": 0.0,
-      "movingSec": 3438,
-      "paceMinKm": 0,
-      "avgHR": 123.3,
-      "maxHR": 167.0,
-      "type": "Workout"
     }
   ]
 }
