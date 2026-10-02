@@ -42,10 +42,10 @@
       "score": 63,
       "level": "MODERATE"
     },
-    "rhr": 0,
-    "battery": 0,
+    "rhr": 55,
+    "battery": 57,
     "sleep": 86,
-    "stress": "CALM",
+    "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-09-29",
       "vo2MaxPreciseValue": 40.4,
