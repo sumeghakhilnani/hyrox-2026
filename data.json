@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-10-02",
+  "lastUpdated": "2026-10-03",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 54,
+      "weeklyAvg": 55,
       "baselineLow": 47,
-      "baselineHigh": 69,
+      "baselineHigh": 70,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "S",
-          "v": 0
-        },
         {
           "d": "S",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "F",
           "v": 0
+        },
+        {
+          "d": "S",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 63,
-      "level": "MODERATE"
+      "score": 79,
+      "level": "HIGH"
     },
-    "rhr": 55,
-    "battery": 57,
-    "sleep": 86,
+    "rhr": 53,
+    "battery": 90,
+    "sleep": 81,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-09-29",
@@ -56,6 +56,36 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning Workout",
+      "date": "2026-10-03",
+      "distanceKm": 0.0,
+      "movingSec": 3109,
+      "paceMinKm": 0,
+      "avgHR": 121.7,
+      "maxHR": 149.0,
+      "type": "Workout"
+    },
+    {
+      "name": "Morning Weight Training",
+      "date": "2026-10-03",
+      "distanceKm": 0.0,
+      "movingSec": 1978,
+      "paceMinKm": 0,
+      "avgHR": 96.6,
+      "maxHR": 130.0,
+      "type": "WeightTraining"
+    },
+    {
+      "name": "Evening Walk",
+      "date": "2026-10-02",
+      "distanceKm": 2.06,
+      "movingSec": 1856,
+      "paceMinKm": 15.03,
+      "avgHR": 86.5,
+      "maxHR": 114.0,
+      "type": "Walk"
+    },
     {
       "name": "Morning HIIT",
       "date": "2026-10-02",
@@ -164,36 +194,6 @@
       "paceMinKm": 7.21,
       "avgHR": 145.6,
       "maxHR": 155.0,
-      "type": "Run"
-    },
-    {
-      "name": "Morning Run",
-      "date": "2026-09-17",
-      "distanceKm": 5.01,
-      "movingSec": 2486,
-      "paceMinKm": 8.27,
-      "avgHR": 147.6,
-      "maxHR": 158.0,
-      "type": "Run"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-09-16",
-      "distanceKm": 0.0,
-      "movingSec": 3279,
-      "paceMinKm": 0,
-      "avgHR": 127.3,
-      "maxHR": 161.0,
-      "type": "Workout"
-    },
-    {
-      "name": "8x400m",
-      "date": "2026-09-15",
-      "distanceKm": 5.86,
-      "movingSec": 2825,
-      "paceMinKm": 8.04,
-      "avgHR": 144.5,
-      "maxHR": 161.0,
       "type": "Run"
     }
   ]
