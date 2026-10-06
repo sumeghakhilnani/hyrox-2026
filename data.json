@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-10-05",
+  "lastUpdated": "2026-10-06",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 58,
+      "weeklyAvg": 61,
       "baselineLow": 47,
       "baselineHigh": 71,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "T",
-          "v": 0
-        },
         {
           "d": "W",
           "v": 0
@@ -35,27 +31,51 @@
         {
           "d": "M",
           "v": 0
+        },
+        {
+          "d": "T",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 71,
+      "score": 72,
       "level": "MODERATE"
     },
     "rhr": 50,
-    "battery": 57,
-    "sleep": 78,
+    "battery": 73,
+    "sleep": 72,
     "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-09-29",
-      "vo2MaxPreciseValue": 40.4,
-      "vo2MaxValue": 40.0,
+      "calendarDate": "2026-10-06",
+      "vo2MaxPreciseValue": 40.5,
+      "vo2MaxValue": 41.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
       "maxMetCategory": 0
     }
   },
   "activities": [
+    {
+      "name": "Morning Run",
+      "date": "2026-10-06",
+      "distanceKm": 2.67,
+      "movingSec": 1333,
+      "paceMinKm": 8.33,
+      "avgHR": 142.5,
+      "maxHR": 154.0,
+      "type": "Run"
+    },
+    {
+      "name": "Morning Weight Training",
+      "date": "2026-10-06",
+      "distanceKm": 0.0,
+      "movingSec": 1169,
+      "paceMinKm": 0,
+      "avgHR": 94.0,
+      "maxHR": 131.0,
+      "type": "WeightTraining"
+    },
     {
       "name": "Strength Block - Week 1/8",
       "date": "2026-10-05",
@@ -175,26 +195,6 @@
       "avgHR": 121.1,
       "maxHR": 176.0,
       "type": "Workout"
-    },
-    {
-      "name": "Morning Run",
-      "date": "2026-09-22",
-      "distanceKm": 5.51,
-      "movingSec": 2414,
-      "paceMinKm": 7.3,
-      "avgHR": 155.4,
-      "maxHR": 178.0,
-      "type": "Run"
-    },
-    {
-      "name": "16k",
-      "date": "2026-09-20",
-      "distanceKm": 16.01,
-      "movingSec": 8043,
-      "paceMinKm": 8.37,
-      "avgHR": 149.1,
-      "maxHR": 170.0,
-      "type": "Run"
     }
   ]
 }
