@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-10-07",
+  "lastUpdated": "2026-10-08",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 66,
+      "weeklyAvg": 72,
       "baselineLow": 47,
       "baselineHigh": 71,
-      "status": "BALANCED",
+      "status": "UNBALANCED",
       "sparkline": [
-        {
-          "d": "T",
-          "v": 0
-        },
         {
           "d": "F",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "W",
           "v": 0
+        },
+        {
+          "d": "T",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 63,
+      "score": 61,
       "level": "MODERATE"
     },
-    "rhr": 49,
-    "battery": 66,
-    "sleep": 74,
+    "rhr": 51,
+    "battery": 55,
+    "sleep": 65,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-10-06",
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning Yoga",
+      "date": "2026-10-08",
+      "distanceKm": 0.0,
+      "movingSec": 3349,
+      "paceMinKm": 0,
+      "avgHR": 79.3,
+      "maxHR": 114.0,
+      "type": "Yoga"
+    },
     {
       "name": "Strength Block - Week 1/8",
       "date": "2026-10-07",
@@ -185,16 +195,6 @@
       "avgHR": 135.3,
       "maxHR": 147.0,
       "type": "Workout"
-    },
-    {
-      "name": "Morning Run",
-      "date": "2026-09-24",
-      "distanceKm": 5.25,
-      "movingSec": 2763,
-      "paceMinKm": 8.77,
-      "avgHR": 136.2,
-      "maxHR": 150.0,
-      "type": "Run"
     }
   ]
 }
