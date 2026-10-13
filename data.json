@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-10-12",
+  "lastUpdated": "2026-10-13",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 72,
+      "weeklyAvg": 73,
       "baselineLow": 48,
-      "baselineHigh": 75,
+      "baselineHigh": 76,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "T",
-          "v": 0
-        },
         {
           "d": "W",
           "v": 0
@@ -35,27 +31,51 @@
         {
           "d": "M",
           "v": 0
+        },
+        {
+          "d": "T",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 76,
+      "score": 77,
       "level": "HIGH"
     },
-    "rhr": 47,
-    "battery": 47,
-    "sleep": 89,
+    "rhr": 49,
+    "battery": 72,
+    "sleep": 88,
     "stress": "UNKNOWN",
     "vo2": {
-      "calendarDate": "2026-10-06",
-      "vo2MaxPreciseValue": 40.5,
-      "vo2MaxValue": 41.0,
+      "calendarDate": "2026-10-13",
+      "vo2MaxPreciseValue": 39.7,
+      "vo2MaxValue": 40.0,
       "fitnessAge": null,
       "fitnessAgeDescription": null,
       "maxMetCategory": 0
     }
   },
   "activities": [
+    {
+      "name": "Morning Run",
+      "date": "2026-10-13",
+      "distanceKm": 4.01,
+      "movingSec": 1963,
+      "paceMinKm": 8.16,
+      "avgHR": 146.3,
+      "maxHR": 157.0,
+      "type": "Run"
+    },
+    {
+      "name": "Morning Weight Training",
+      "date": "2026-10-13",
+      "distanceKm": 0.0,
+      "movingSec": 1272,
+      "paceMinKm": 0,
+      "avgHR": 92.4,
+      "maxHR": 128.0,
+      "type": "WeightTraining"
+    },
     {
       "name": "Strength Block - Week 2/8",
       "date": "2026-10-12",
@@ -175,26 +195,6 @@
       "avgHR": 114.0,
       "maxHR": 184.0,
       "type": "Workout"
-    },
-    {
-      "name": "Strength Endurance - 40 min AMRAP \ud83d\udc80",
-      "date": "2026-09-30",
-      "distanceKm": 0.0,
-      "movingSec": 3444,
-      "paceMinKm": 0,
-      "avgHR": 136.6,
-      "maxHR": 182.0,
-      "type": "Workout"
-    },
-    {
-      "name": "400m Repeats with Runna \u2705",
-      "date": "2026-09-29",
-      "distanceKm": 5.73,
-      "movingSec": 2397,
-      "paceMinKm": 6.97,
-      "avgHR": null,
-      "maxHR": null,
-      "type": "Run"
     }
   ]
 }
