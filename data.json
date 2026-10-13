@@ -43,9 +43,9 @@
       "level": "HIGH"
     },
     "rhr": 49,
-    "battery": 72,
+    "battery": 47,
     "sleep": 88,
-    "stress": "UNKNOWN",
+    "stress": "BALANCED",
     "vo2": {
       "calendarDate": "2026-10-13",
       "vo2MaxPreciseValue": 39.7,
@@ -67,7 +67,7 @@
       "type": "Run"
     },
     {
-      "name": "Morning Weight Training",
+      "name": "Lower body prehab",
       "date": "2026-10-13",
       "distanceKm": 0.0,
       "movingSec": 1272,
