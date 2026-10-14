@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-10-13",
+  "lastUpdated": "2026-10-14",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 73,
-      "baselineLow": 48,
+      "weeklyAvg": 74,
+      "baselineLow": 49,
       "baselineHigh": 76,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "W",
-          "v": 0
-        },
         {
           "d": "T",
           "v": 0
@@ -35,17 +31,21 @@
         {
           "d": "T",
           "v": 0
+        },
+        {
+          "d": "W",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 77,
-      "level": "HIGH"
+      "score": 63,
+      "level": "MODERATE"
     },
-    "rhr": 49,
-    "battery": 47,
-    "sleep": 88,
-    "stress": "BALANCED",
+    "rhr": 48,
+    "battery": 69,
+    "sleep": 77,
+    "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-10-13",
       "vo2MaxPreciseValue": 39.7,
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Lower Body Strength",
+      "date": "2026-10-14",
+      "distanceKm": 0.0,
+      "movingSec": 4002,
+      "paceMinKm": 0,
+      "avgHR": 125.8,
+      "maxHR": 171.0,
+      "type": "WeightTraining"
+    },
     {
       "name": "Morning Run",
       "date": "2026-10-13",
@@ -185,16 +195,6 @@
       "avgHR": 86.5,
       "maxHR": 114.0,
       "type": "Walk"
-    },
-    {
-      "name": "Morning HIIT",
-      "date": "2026-10-02",
-      "distanceKm": 0.0,
-      "movingSec": 4084,
-      "paceMinKm": 0,
-      "avgHR": 114.0,
-      "maxHR": 184.0,
-      "type": "Workout"
     }
   ]
 }
