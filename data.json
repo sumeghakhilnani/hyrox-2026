@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-10-14",
+  "lastUpdated": "2026-10-15",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 74,
+      "weeklyAvg": 75,
       "baselineLow": 49,
-      "baselineHigh": 76,
+      "baselineHigh": 77,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "T",
-          "v": 0
-        },
         {
           "d": "F",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "W",
           "v": 0
+        },
+        {
+          "d": "T",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 63,
-      "level": "MODERATE"
+      "score": 83,
+      "level": "HIGH"
     },
     "rhr": 48,
-    "battery": 69,
-    "sleep": 77,
+    "battery": 65,
+    "sleep": 92,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-10-13",
@@ -56,6 +56,26 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning Weight Training",
+      "date": "2026-10-15",
+      "distanceKm": 0.0,
+      "movingSec": 2308,
+      "paceMinKm": 0,
+      "avgHR": 96.6,
+      "maxHR": 126.0,
+      "type": "WeightTraining"
+    },
+    {
+      "name": "Morning Yoga",
+      "date": "2026-10-15",
+      "distanceKm": 0.0,
+      "movingSec": 2874,
+      "paceMinKm": 0,
+      "avgHR": 82.6,
+      "maxHR": 122.0,
+      "type": "Yoga"
+    },
     {
       "name": "Lower Body Strength",
       "date": "2026-10-14",
@@ -175,26 +195,6 @@
       "avgHR": 121.7,
       "maxHR": 149.0,
       "type": "Workout"
-    },
-    {
-      "name": "Morning Weight Training",
-      "date": "2026-10-03",
-      "distanceKm": 0.0,
-      "movingSec": 1978,
-      "paceMinKm": 0,
-      "avgHR": 96.6,
-      "maxHR": 130.0,
-      "type": "WeightTraining"
-    },
-    {
-      "name": "Evening Walk",
-      "date": "2026-10-02",
-      "distanceKm": 2.06,
-      "movingSec": 1856,
-      "paceMinKm": 15.03,
-      "avgHR": 86.5,
-      "maxHR": 114.0,
-      "type": "Walk"
     }
   ]
 }
