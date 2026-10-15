@@ -57,7 +57,7 @@
   },
   "activities": [
     {
-      "name": "Morning Weight Training",
+      "name": "Upper Body Strength",
       "date": "2026-10-15",
       "distanceKm": 0.0,
       "movingSec": 2308,
@@ -67,7 +67,7 @@
       "type": "WeightTraining"
     },
     {
-      "name": "Morning Yoga",
+      "name": "Mobility",
       "date": "2026-10-15",
       "distanceKm": 0.0,
       "movingSec": 2874,
