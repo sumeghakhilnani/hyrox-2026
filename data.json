@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-10-15",
+  "lastUpdated": "2026-10-16",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 75,
+      "weeklyAvg": 79,
       "baselineLow": 49,
       "baselineHigh": 77,
-      "status": "BALANCED",
+      "status": "UNBALANCED",
       "sparkline": [
-        {
-          "d": "F",
-          "v": 0
-        },
         {
           "d": "S",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "T",
           "v": 0
+        },
+        {
+          "d": "F",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 83,
-      "level": "HIGH"
+      "score": 46,
+      "level": "LOW"
     },
     "rhr": 48,
-    "battery": 65,
-    "sleep": 92,
+    "battery": 70,
+    "sleep": 65,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-10-13",
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Full Body Strength + Conditioning",
+      "date": "2026-10-16",
+      "distanceKm": 0.0,
+      "movingSec": 3377,
+      "paceMinKm": 0,
+      "avgHR": 133.2,
+      "maxHR": 184.0,
+      "type": "Workout"
+    },
     {
       "name": "Upper Body Strength",
       "date": "2026-10-15",
@@ -185,16 +195,6 @@
       "avgHR": 118.8,
       "maxHR": 167.0,
       "type": "WeightTraining"
-    },
-    {
-      "name": "Morning Workout",
-      "date": "2026-10-03",
-      "distanceKm": 0.0,
-      "movingSec": 3109,
-      "paceMinKm": 0,
-      "avgHR": 121.7,
-      "maxHR": 149.0,
-      "type": "Workout"
     }
   ]
 }
