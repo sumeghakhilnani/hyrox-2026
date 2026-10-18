@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-10-17",
+  "lastUpdated": "2026-10-18",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 77,
-      "baselineLow": 49,
-      "baselineHigh": 78,
+      "weeklyAvg": 74,
+      "baselineLow": 50,
+      "baselineHigh": 79,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "S",
-          "v": 0
-        },
         {
           "d": "M",
           "v": 0
@@ -35,15 +31,19 @@
         {
           "d": "S",
           "v": 0
+        },
+        {
+          "d": "S",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 71,
+      "score": 55,
       "level": "MODERATE"
     },
-    "rhr": 51,
-    "battery": 59,
+    "rhr": 50,
+    "battery": 53,
     "sleep": 78,
     "stress": "UNKNOWN",
     "vo2": {
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Morning Run",
+      "date": "2026-10-18",
+      "distanceKm": 7.01,
+      "movingSec": 3261,
+      "paceMinKm": 7.75,
+      "avgHR": 150.7,
+      "maxHR": 162.0,
+      "type": "Run"
+    },
     {
       "name": "Morning Weight Training",
       "date": "2026-10-17",
@@ -185,16 +195,6 @@
       "avgHR": 142.5,
       "maxHR": 154.0,
       "type": "Run"
-    },
-    {
-      "name": "Lower Body Prehab",
-      "date": "2026-10-06",
-      "distanceKm": 0.0,
-      "movingSec": 1169,
-      "paceMinKm": 0,
-      "avgHR": 94.0,
-      "maxHR": 131.0,
-      "type": "WeightTraining"
     }
   ]
 }
