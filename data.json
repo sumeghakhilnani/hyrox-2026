@@ -1,17 +1,13 @@
 {
-  "lastUpdated": "2026-10-21",
+  "lastUpdated": "2026-10-22",
   "recovery": {
     "hrv": {
       "lastNight": 0,
-      "weeklyAvg": 74,
-      "baselineLow": 50,
-      "baselineHigh": 81,
+      "weeklyAvg": 73,
+      "baselineLow": 51,
+      "baselineHigh": 82,
       "status": "BALANCED",
       "sparkline": [
-        {
-          "d": "T",
-          "v": 0
-        },
         {
           "d": "F",
           "v": 0
@@ -35,16 +31,20 @@
         {
           "d": "W",
           "v": 0
+        },
+        {
+          "d": "T",
+          "v": 0
         }
       ]
     },
     "readiness": {
-      "score": 58,
-      "level": "MODERATE"
+      "score": 75,
+      "level": "HIGH"
     },
-    "rhr": 52,
-    "battery": 70,
-    "sleep": 76,
+    "rhr": 51,
+    "battery": 66,
+    "sleep": 83,
     "stress": "UNKNOWN",
     "vo2": {
       "calendarDate": "2026-10-21",
@@ -56,6 +56,16 @@
     }
   },
   "activities": [
+    {
+      "name": "Full Body Strength",
+      "date": "2026-10-22",
+      "distanceKm": 0.0,
+      "movingSec": 4784,
+      "paceMinKm": 0,
+      "avgHR": 111.0,
+      "maxHR": 162.0,
+      "type": "WeightTraining"
+    },
     {
       "name": "Morning Run",
       "date": "2026-10-21",
@@ -185,16 +195,6 @@
       "avgHR": 115.3,
       "maxHR": 154.0,
       "type": "WeightTraining"
-    },
-    {
-      "name": "Mobility",
-      "date": "2026-10-08",
-      "distanceKm": 0.0,
-      "movingSec": 3349,
-      "paceMinKm": 0,
-      "avgHR": 79.3,
-      "maxHR": 114.0,
-      "type": "Yoga"
     }
   ]
 }
